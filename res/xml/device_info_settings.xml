@@ -22,7 +22,10 @@
                 android:title="@string/system_update_settings_list_item_title" 
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-        </PreferenceScreen> -->
+        </PreferenceScreen -->
+        
+        <PreferenceScreen android:key="osr_logo"
+                          android:layout="@layout/logo_row" />
 
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
@@ -30,6 +33,13 @@
                     android:targetPackage="@string/additional_system_update"
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
+
+        <!-- OSR version -->
+        <Preference android:key="osr_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/osr_version"
+                android:summary="@string/mod_version_default"
+		android:icon="@drawable/st_pref_mask"/>
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
@@ -40,28 +50,28 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
-        <!-- CyanogenMod Updates -->
+        <!-- CyanogenMod Updates
         <PreferenceScreen android:key="cm_updates"
                 android:title="@string/cmupdate_settings_title" 
                 android:summary="@string/cmupdate_settings_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.cyanogenmod.updater"
                     android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
-        </PreferenceScreen>
+        </PreferenceScreen>-->
 
-        <!-- Anonymous statistics - (CMStats) -->
+        <!-- Anonymous statistics - (CMStats)
         <PreferenceScreen
             android:key="cmstats"
             android:title="@string/anonymous_statistics_title"
             android:summary="@string/anonymous_statistics_summary"
             android:fragment="com.android.settings.cmstats.AnonymousStats" >
-        </PreferenceScreen>
+        </PreferenceScreen>-->
 
-        <!-- Change Log -->
+        <!-- Change Log
         <PreferenceScreen android:key="changelog"
             android:title="@string/changelog_title"
             android:fragment="com.android.settings.cyanogenmod.ChangeLog" >
-        </PreferenceScreen>
+        </PreferenceScreen>-->
 
         <!-- Legal Information -->
         <PreferenceScreen
@@ -76,11 +86,7 @@
             <!-- Copyright information -->
             <PreferenceScreen
                     android:key="copyright"
-                    android:title="@string/copyright_title">        <!-- OSR version -->
-        <Preference android:key="osr_version"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/osr_version"
-                android:summary="@string/mod_version_default" />
+                    android:title="@string/copyright_title">
                 <intent android:action="android.settings.COPYRIGHT" />
             </PreferenceScreen>
 
@@ -163,17 +169,11 @@
                 android:title="@string/mem_info"
                 android:summary="@string/device_info_default"/>
 
-        <!-- Mod version -->
+        <!-- Mod version
         <Preference android:key="mod_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mod_version"
-                android:summary="@string/mod_version_default" />
-
-        <!-- OSR version -->
-        <Preference android:key="osr_version"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/osr_version"
-                android:summary="@string/mod_version_default" />
+                android:summary="@string/mod_version_default" />-->
 
         <!-- Mod build date -->
         <Preference android:key="build_date"
