@@ -4534,4 +4534,6 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+
+   <string name="osr_version">OSR version</string>
 </resources>

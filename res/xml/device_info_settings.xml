@@ -76,7 +76,11 @@
             <!-- Copyright information -->
             <PreferenceScreen
                     android:key="copyright"
-                    android:title="@string/copyright_title">
+                    android:title="@string/copyright_title">        <!-- OSR version -->
+        <Preference android:key="osr_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/osr_version"
+                android:summary="@string/mod_version_default" />
                 <intent android:action="android.settings.COPYRIGHT" />
             </PreferenceScreen>
 
@@ -163,6 +167,12 @@
         <Preference android:key="mod_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mod_version"
+                android:summary="@string/mod_version_default" />
+
+        <!-- OSR version -->
+        <Preference android:key="osr_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/osr_version"
                 android:summary="@string/mod_version_default" />
 
         <!-- Mod build date -->
