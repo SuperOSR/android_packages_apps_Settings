@@ -183,7 +183,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
             }
         }
 
-        if (mIsPrimary) {
+        if (false/*mIsPrimary*/) {
             switch (mDPM.getStorageEncryptionStatus()) {
             case DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE:
                 // The device is currently encrypted.

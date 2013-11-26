@@ -792,8 +792,6 @@
     <string name="kernel_version" msgid="9192574954196167602">"カーネルバージョン"</string>
     <string name="build_number" msgid="3075795840572241758">"ビルド番号"</string>
     <string name="selinux_status" msgid="6212165375172061672">"SELinuxのステータス"</string>
-    <string name="cpu_type" msgid="6793279B8D03BCB4124">"プロセッサ"</string>
-    <string name="software_version" msgid="1723274B8503B6B7134">ソフトウェアのバージョン"</string>
     <string name="device_info_not_available" msgid="8062521887156825182">"該当なし"</string>
     <string name="device_status_activity_title" msgid="1411201799384697904">"端末の状態"</string>
     <string name="device_status" msgid="607405385799807324">"端末の状態"</string>

@@ -56,59 +56,10 @@
             android:key="notification_pulse"
             android:title="@string/notification_pulse_title"
             android:persistent="false" />
-        <ListPreference
-            android:key="accelerometer_coornadite"
-            android:title="@string/accelerometer_coordinate_title"
-            android:persistent="false"
-            android:entries="@array/accelerometer_entries"
-            android:entryValues="@array/accelerometer_values" />
-
-        <PreferenceScreen
-            android:title="@string/screen_adaption_setting"
-            android:summary="@string/screen_adaption_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.ScreenAdaption" />
-        </PreferenceScreen>
 
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
-
-    <PreferenceCategory
-        android:title="@string/hdmi_setting"
-        android:key="hdmi_output_mode_cate">
-        <ListPreference
-            android:key="hdmi_output_mode"
-            android:title="@string/hdmi_output_mode"
-            android:summary="@string/hdmi_output_mode_summary"
-            android:persistent="false"
-            android:entries="@array/hdmi_output_mode_entries"
-            android:entryValues="@array/hdmi_output_mode_values" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/bright_system" />
-
-    <CheckBoxPreference
-        android:key="bright_system"
-        android:summary="@string/bright_system_summary"
-        android:title="@string/bright_system" />
-    <CheckBoxPreference
-        android:key="bright_demo_mode"
-        android:summary="@string/demo_mode_summary"
-        android:title="@string/demo_mode" />
-
-    <PreferenceCategory android:title="@string/brightness_light" />
-
-    <CheckBoxPreference
-        android:key="brightness_light"
-        android:persistent="false"
-        android:title="@string/brightness_light" />
-    <CheckBoxPreference
-        android:key="backlight_demo_mode"
-        android:summary="@string/demo_mode_summary"
-        android:title="@string/demo_mode" />
 
 </PreferenceScreen>

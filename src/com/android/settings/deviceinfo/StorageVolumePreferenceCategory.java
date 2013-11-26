@@ -36,6 +36,7 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.provider.MediaStore;
 import android.text.format.Formatter;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.deviceinfo.StorageMeasurement.MeasurementDetails;
@@ -48,6 +49,7 @@ import java.util.List;
 
 public class StorageVolumePreferenceCategory extends PreferenceCategory {
     public static final String KEY_CACHE = "cache";
+	private static final String TAG = "StorageVolumePreferenceCategory";
 
     private static final int ORDER_USAGE_BAR = -2;
     private static final int ORDER_STORAGE_LOW = -1;
@@ -195,19 +197,19 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory {
                 }
             }
         }
-
+        
+		// Only allow formatting of primary physical storage
+        // TODO: enable for non-primary volumes once MTP is fixed
+        final boolean allowFormat = mVolume != null ? mVolume.isPrimary() : false;
         final boolean isRemovable = mVolume != null ? mVolume.isRemovable() : false;
         // Always create the preference since many code rely on it existing
         mMountTogglePreference = new Preference(context);
-        if (isRemovable) {
+        if (isRemovable||allowFormat) {
             mMountTogglePreference.setTitle(R.string.sd_eject);
             mMountTogglePreference.setSummary(R.string.sd_eject_summary);
             addPreference(mMountTogglePreference);
         }
 
-        // Only allow formatting of primary physical storage
-        // TODO: enable for non-primary volumes once MTP is fixed
-        final boolean allowFormat = mVolume != null ? mVolume.isPrimary() : false;
         if (allowFormat) {
             mFormatPreference = new Preference(context);
             mFormatPreference.setTitle(R.string.sd_format);
@@ -238,7 +240,14 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory {
     private void updatePreferencesFromState() {
         // Only update for physical volumes
         if (mVolume == null) return;
+        if (mMountTogglePreference==null) return;
 
+        addPreference(mUsageBarPreference);
+	    addPreference(mItemTotal);
+		addPreference(mItemAvailable);
+		if (mFormatPreference != null) {
+        	addPreference(mFormatPreference);
+        }
         mMountTogglePreference.setEnabled(true);
 
         final String state = mStorageManager.getVolumeState(mVolume.getPath());
@@ -249,14 +258,22 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory {
             mItemAvailable.setTitle(R.string.memory_available);
         }
 
+        if ((mVolume == null || !mVolume.isRemovable())
+                && !Environment.MEDIA_UNMOUNTED.equals(state)) {
+            // This device has built-in storage that is not removable.
+            // There is no reason for the user to unmount it.
+            removePreference(mMountTogglePreference);
+        }
+
         if (Environment.MEDIA_MOUNTED.equals(state)
                 || Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            mMountTogglePreference.setEnabled(true);
+           	mMountTogglePreference.setEnabled(true);
             mMountTogglePreference.setTitle(mResources.getString(R.string.sd_eject));
             mMountTogglePreference.setSummary(mResources.getString(R.string.sd_eject_summary));
         } else {
             if (Environment.MEDIA_UNMOUNTED.equals(state) || Environment.MEDIA_NOFS.equals(state)
                     || Environment.MEDIA_UNMOUNTABLE.equals(state)) {
+                addPreference(mMountTogglePreference);
                 mMountTogglePreference.setEnabled(true);
                 mMountTogglePreference.setTitle(mResources.getString(R.string.sd_mount));
                 mMountTogglePreference.setSummary(mResources.getString(R.string.sd_mount_summary));
@@ -307,9 +324,13 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory {
 
     private static long totalValues(HashMap<String, Long> map, String... keys) {
         long total = 0;
+        Long value = null;
+        if(map==null) return 0;
         for (String key : keys) {
             if (map.containsKey(key)) {
-                total += map.get(key);
+                value = map.get(key);
+        	if(value==null) continue;
+            total += value;
             }
         }
         return total;
@@ -317,11 +338,12 @@ public class StorageVolumePreferenceCategory extends PreferenceCategory {
 
     public void updateDetails(MeasurementDetails details) {
         final boolean showDetails = mVolume == null || mVolume.isPrimary();
-        if (!showDetails) return;
 
         // Count caches as available space, since system manages them
         mItemTotal.setSummary(formatSize(details.totalSize));
         mItemAvailable.setSummary(formatSize(details.availSize));
+        
+        if (!showDetails) return;
 
         mUsageBarPreference.clear();
 

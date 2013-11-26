@@ -48,6 +48,9 @@ import com.android.settings.DreamSettings;
 
 import java.util.ArrayList;
 
+import android.os.SystemProperties;
+import android.preference.PreferenceCategory;
+
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
     private static final String TAG = "DisplaySettings";
@@ -61,14 +64,30 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
-
+    private static final String KEY_ACCELEROMETER_COORDINATE = "accelerometer_coornadite";
+    private static final String KEY_SCREEN_ADAPTION = "screen_adaption";
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private DisplayManager mDisplayManager;
 
+    private static final String KEY_BRIGHT_SYSTEM = "bright_system";
+    private static final String KEY_BRIGHT_SYSTEM_DEMO = "bright_demo_mode";
+    private static final String KEY_BRIGHTNESS_LIGHT = "brightness_light";
+    private static final String KEY_BRIGHTNESS_LIGHT_DEMO = "backlight_demo_mode";
+    private static final String KEY_HDMI_OUTPUT_MODE = "hdmi_output_mode";
+    private static final String KEY_HDMI_OUTPUT_MODE_720P = "hdmi_output_mode_720p";
+    private static final String KEY_HDMI_OUTPUT_MODE_CATE = "hdmi_output_mode_cate";
+    private static final String KEY_HDMI_FULL_SCREEN = "hdmi_full_screen";
     private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
     private CheckBoxPreference mNotificationPulse;
+    private ListPreference mAccelerometerCoordinate;
+    private CheckBoxPreference mBrightSystem,mBrightSystemDemo;
+    private CheckBoxPreference mBrightnessLight,mBrightnessLightDemo;
+
+    private ListPreference mHdmiOutputModePreference;
+    private PreferenceCategory mHdmiOutputModeCategory;
+    private CheckBoxPreference mHdmiFullScreen;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -78,6 +97,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private WifiDisplayStatus mWifiDisplayStatus;
     private Preference mWifiDisplayPreference;
 
+    private Preference mScreenAdaption;
     private final RotationPolicy.RotationPolicyListener mRotationPolicyListener =
             new RotationPolicy.RotationPolicyListener() {
         @Override
@@ -95,8 +115,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         mAccelerometer = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
-        if (!RotationPolicy.isRotationSupported(getActivity())
-                || RotationPolicy.isRotationLockToggleSupported(getActivity())) {
+		if (false/*RotationPolicy.isRotationLockToggleSupported(getActivity())*/) {
             // If rotation lock is supported, then we do not provide this option in
             // Display settings.  However, is still available in Accessibility settings,
             // if the device supports rotation.
@@ -135,6 +154,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
             }
         }
+        mScreenAdaption = (Preference)findPreference(KEY_SCREEN_ADAPTION);
+        mAccelerometerCoordinate = (ListPreference) findPreference(KEY_ACCELEROMETER_COORDINATE);
+        if(mAccelerometerCoordinate != null){
+            mAccelerometerCoordinate.setOnPreferenceChangeListener(this);
+            String value = Settings.System.getString(getContentResolver(),
+                    Settings.System.ACCELEROMETER_COORDINATE);
+            mAccelerometerCoordinate.setValue(value);
+            updateAccelerometerCoordinateSummary(value);
+        }
 
         mDisplayManager = (DisplayManager)getActivity().getSystemService(
                 Context.DISPLAY_SERVICE);
@@ -145,6 +173,105 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mWifiDisplayPreference);
             mWifiDisplayPreference = null;
         }
+        mBrightSystem = (CheckBoxPreference)findPreference(KEY_BRIGHT_SYSTEM);
+        mBrightSystemDemo = (CheckBoxPreference)findPreference(KEY_BRIGHT_SYSTEM_DEMO);
+        boolean demoEnabled;
+        if(mBrightSystem != null) {
+            try{
+                demoEnabled = (Settings.System.getInt(resolver,
+                        Settings.System.BRIGHT_SYSTEM_MODE)&0x01) > 0;
+                mBrightSystem.setChecked(demoEnabled);
+                mBrightSystem.setOnPreferenceChangeListener(this);
+                if (mBrightSystemDemo != null && demoEnabled) {
+                    try {
+                        mBrightSystemDemo.setChecked((Settings.System.getInt(resolver,
+                                Settings.System.BRIGHT_SYSTEM_MODE)&0x02)> 0);
+                        mBrightSystemDemo.setOnPreferenceChangeListener(this);
+                    } catch (SettingNotFoundException snfe) {
+                        Log.e(TAG, Settings.System.BRIGHT_SYSTEM_MODE + " not found");
+                    }
+                } else if (mBrightSystemDemo == null) {
+                    getPreferenceScreen().removePreference(mBrightSystemDemo);
+                } else {
+                    mBrightSystemDemo.setEnabled(demoEnabled);
+                }
+            } catch (SettingNotFoundException snfe) {
+                Log.e(TAG, Settings.System.BRIGHT_SYSTEM_MODE + " not found");
+            }
+        } else {
+            getPreferenceScreen().removePreference(mBrightSystem);
+        }
+
+        mBrightnessLight = (CheckBoxPreference)findPreference(KEY_BRIGHTNESS_LIGHT);
+        mBrightnessLightDemo = (CheckBoxPreference)findPreference(KEY_BRIGHTNESS_LIGHT_DEMO);
+        if(mBrightnessLight != null){
+            try{
+                demoEnabled = (Settings.System.getInt(resolver,
+                        Settings.System.BRIGHTNESS_LIGHT_MODE)&0x01)> 0;
+                mBrightnessLight.setChecked(demoEnabled);
+                mBrightnessLight.setOnPreferenceChangeListener(this);
+
+                if (mBrightnessLightDemo != null && demoEnabled) {
+                    try {
+                        mBrightnessLightDemo.setChecked((Settings.System.getInt(resolver,
+                                Settings.System.BRIGHTNESS_LIGHT_MODE)&0x02) > 0);
+                        mBrightnessLightDemo.setOnPreferenceChangeListener(this);
+                    } catch (SettingNotFoundException snfe) {
+                        Log.e(TAG, Settings.System.BRIGHTNESS_LIGHT_MODE + " not found");
+                    }
+                } else if (mBrightnessLightDemo == null) {
+                    getPreferenceScreen().removePreference(mBrightnessLightDemo);
+                } else {
+                    mBrightnessLightDemo.setEnabled(demoEnabled);
+                }
+            } catch (SettingNotFoundException snfe) {
+                Log.e(TAG, Settings.System.BRIGHTNESS_LIGHT_MODE + " not found");
+            }
+        } else {
+            getPreferenceScreen().removePreference(mBrightnessLight);
+        }
+
+        final int sethdmimode = SystemProperties.getInt("ro.sf.showhdmisettings", 0);
+        final boolean isShowHdmiMode = (sethdmimode & 0x03) > 0;
+        final boolean isShow1080p = (sethdmimode & 0x02) > 0;
+        final boolean isShowFullScreen = (sethdmimode & 0x04) > 0;
+        mHdmiOutputModeCategory = (PreferenceCategory) findPreference(KEY_HDMI_OUTPUT_MODE_CATE);
+        mHdmiFullScreen = (CheckBoxPreference)findPreference(KEY_HDMI_FULL_SCREEN);
+        if (isShow1080p) {
+            mHdmiOutputModePreference = (ListPreference) findPreference(KEY_HDMI_OUTPUT_MODE_720P);
+            mHdmiOutputModeCategory.removePreference(mHdmiOutputModePreference);
+            mHdmiOutputModePreference = (ListPreference) findPreference(KEY_HDMI_OUTPUT_MODE);
+        } else {
+            mHdmiOutputModePreference = (ListPreference) findPreference(KEY_HDMI_OUTPUT_MODE);
+            mHdmiOutputModeCategory.removePreference(mHdmiOutputModePreference);
+            mHdmiOutputModePreference = (ListPreference) findPreference(KEY_HDMI_OUTPUT_MODE_720P);
+        }
+
+        if (sethdmimode != 0) {
+            if (isShowHdmiMode) {
+                final int currentHdmiMode = Settings.System.getInt(resolver, Settings.System.HDMI_OUTPUT_MODE, 0);
+                mHdmiOutputModePreference.setValue(String.valueOf(currentHdmiMode));
+                mHdmiOutputModePreference.setOnPreferenceChangeListener(this);
+            } else {
+                mHdmiOutputModeCategory.removePreference(mHdmiOutputModePreference);
+                mHdmiOutputModePreference = null;
+            }
+
+            if (isShowFullScreen) {
+                final boolean isHdmiFullScreen = Settings.System.getInt(resolver,
+                        Settings.System.HDMI_FULL_SCREEN, 0) > 0;
+                mHdmiFullScreen.setChecked(isHdmiFullScreen);
+                mHdmiFullScreen.setOnPreferenceChangeListener(this);
+            } else {
+                mHdmiOutputModeCategory.removePreference(mHdmiFullScreen);
+                mHdmiFullScreen = null;
+            }
+        } else {
+            getPreferenceScreen().removePreference(mHdmiOutputModeCategory);
+            mHdmiOutputModePreference = null;
+            mHdmiOutputModeCategory = null;
+            mHdmiFullScreen = null;
+        }
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -152,7 +279,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         String summary;
         if (currentTimeout < 0) {
             // Unsupported value
-            summary = "";
+            summary = preference.getContext().getString(R.string.never_sleep);
         } else {
             final CharSequence[] entries = preference.getEntries();
             final CharSequence[] values = preference.getEntryValues();
@@ -162,7 +289,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 int best = 0;
                 for (int i = 0; i < values.length; i++) {
                     long timeout = Long.parseLong(values[i].toString());
-                    if (currentTimeout >= timeout) {
+                    if (currentTimeout == timeout) {
                         best = i;
                     }
                 }
@@ -292,6 +419,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         readFontSizePreference(mFontSizePref);
         updateScreenSaverSummary();
         updateWifiDisplaySummary();
+        if (mAccelerometerCoordinate != null) {
+            updateAccelerometerCoordinateSummary(mAccelerometerCoordinate.getValue());
+        }
     }
 
     private void updateScreenSaverSummary() {
@@ -324,6 +454,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mAccelerometer.setChecked(!RotationPolicy.isRotationLocked(getActivity()));
     }
 
+    private void updateAccelerometerCoordinateSummary(Object value){
+        CharSequence[] summaries = getResources().getTextArray(R.array.accelerometer_summaries);
+        CharSequence[] values = mAccelerometerCoordinate.getEntryValues();
+        for (int i=0; i<values.length; i++) {
+            if (values[i].equals(value)) {
+                mAccelerometerCoordinate.setSummary(summaries[i]);
+                break;
+            }
+        }
+    }
+
     public void writeFontSizePreference(Object objValue) {
         try {
             mCurConfig.fontScale = Float.parseFloat(objValue.toString());
@@ -335,14 +476,51 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mAccelerometer) {
-            RotationPolicy.setRotationLockForAccessibility(
-                    getActivity(), !mAccelerometer.isChecked());
-        } else if (preference == mNotificationPulse) {
-            boolean value = mNotificationPulse.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
-                    value ? 1 : 0);
-            return true;
+        boolean value;
+        int value2;
+        try {
+            if (preference == mAccelerometer) {
+                RotationPolicy.setRotationLockForAccessibility(
+                        getActivity(), !mAccelerometer.isChecked());
+            } else if (preference == mNotificationPulse) {
+                value = mNotificationPulse.isChecked();
+                Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
+                        value ? 1 : 0);
+                return true;
+            } else if (preference == mBrightSystem) {
+                value = mBrightSystem.isChecked();
+                value2 = Settings.System.getInt(getContentResolver(),
+                        Settings.System.BRIGHT_SYSTEM_MODE);
+                Settings.System.putInt(getContentResolver(),Settings.System.BRIGHT_SYSTEM_MODE,
+                        value ? value2|0x01 : value2&0x02);
+                mBrightSystemDemo.setEnabled(value);
+            } else if (preference == mBrightSystemDemo) {
+                value = mBrightSystemDemo.isChecked();
+                value2 = Settings.System.getInt(getContentResolver(),
+                        Settings.System.BRIGHT_SYSTEM_MODE);
+                Settings.System.putInt(getContentResolver(),Settings.System.BRIGHT_SYSTEM_MODE,
+                        value ? value2|0x02 : value2&0x01);
+            } else if (preference == mBrightnessLight) {
+                value = mBrightnessLight.isChecked();
+                value2 = Settings.System.getInt(getContentResolver(),
+                        Settings.System.BRIGHTNESS_LIGHT_MODE);
+                Settings.System.putInt(getContentResolver(),Settings.System.BRIGHTNESS_LIGHT_MODE,
+                        value ? value2|0x01 : value2&0x02);
+                mBrightnessLightDemo.setEnabled(value);
+            } else if (preference == mBrightnessLightDemo) {
+                value = mBrightnessLightDemo.isChecked();
+                value2 = Settings.System.getInt(getContentResolver(),
+                        Settings.System.BRIGHTNESS_LIGHT_MODE);
+                Settings.System.putInt(getContentResolver(),Settings.System.BRIGHTNESS_LIGHT_MODE,
+                        value ? value2|0x02 : value2&0x01);
+            } else if (preference == mHdmiFullScreen) {
+                value = mHdmiFullScreen.isChecked();
+                Settings.System.putInt(getContentResolver(),Settings.System.HDMI_FULL_SCREEN,
+                        value ? 0x01 : 0);
+            }
+        } catch (SettingNotFoundException e) {
+            Log.e(TAG, Settings.System.BRIGHTNESS_LIGHT_MODE+ " or "+
+                    Settings.System.BRIGHT_SYSTEM_MODE + " not found");
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -360,6 +538,24 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
+        }
+        if (KEY_ACCELEROMETER_COORDINATE.equals(key)) {
+            String value = String.valueOf(objValue);
+            try {
+                Settings.System.putString(getContentResolver(),
+                        Settings.System.ACCELEROMETER_COORDINATE, value);
+                updateAccelerometerCoordinateSummary(objValue);
+            }catch (NumberFormatException e) {
+                Log.e(TAG, "could not persist key accelerometer coordinate setting", e);
+            }
+        }
+        if (KEY_HDMI_OUTPUT_MODE.equals(key) || KEY_HDMI_OUTPUT_MODE_720P.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            try {
+                Settings.System.putInt(getContentResolver(), Settings.System.HDMI_OUTPUT_MODE, value);
+            } catch (NumberFormatException e) {
+                Log.e(TAG, "could not persist hdmi output mode setting", e);
+            }
         }
 
         return true;

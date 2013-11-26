@@ -532,12 +532,9 @@ public class Settings extends PreferenceActivity
     }
 
     private void updateHeaderList(List<Header> target) {
-        final boolean showDev = true;
-        /*
-        mDevelopmentPreferences.getBoolean(
+        final boolean showDev = mDevelopmentPreferences.getBoolean(
                 DevelopmentSettings.PREF_SHOW,
                 android.os.Build.TYPE.equals("eng"));
-        */
         int i = 0;
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
@@ -1070,7 +1067,6 @@ public class Settings extends PreferenceActivity
     public static class WirelessSettingsActivity extends Settings { /* empty */ }
     public static class TetherSettingsActivity extends Settings { /* empty */ }
     public static class VpnSettingsActivity extends Settings { /* empty */ }
-    public static class EthernetSettingsActivity extends Settings { /* empty */ }
     public static class DateTimeSettingsActivity extends Settings { /* empty */ }
     public static class StorageSettingsActivity extends Settings { /* empty */ }
     public static class WifiSettingsActivity extends Settings { /* empty */ }

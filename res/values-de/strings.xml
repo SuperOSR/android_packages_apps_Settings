@@ -255,7 +255,7 @@
     <string name="activity_picker_label" msgid="6295660302548177109">"Aktivität auswählen"</string>
     <string name="device_info_label" msgid="6551553813651711205">"Geräteinfo"</string>
     <string name="battery_info_label" msgid="4132685016148679403">"Akkuinfo"</string>
-    <string name="display_label" msgid="8074070940506840792">"Display"</string>
+    <string name="display_label" msgid="8074070940506840792">"Bildschirm"</string>
     <string name="phone_info_label" product="tablet" msgid="7820855350955963628">"Tablet-Informationen"</string>
     <string name="phone_info_label" product="default" msgid="2127552523124277664">"Über das Telefon"</string>
     <string name="sd_card_settings_label" product="nosdcard" msgid="8101475181301178428">"USB-Speicher"</string>

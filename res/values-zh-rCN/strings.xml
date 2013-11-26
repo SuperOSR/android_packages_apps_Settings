@@ -790,6 +790,8 @@
     <string name="kernel_version" msgid="9192574954196167602">"内核版本"</string>
     <string name="build_number" msgid="3075795840572241758">"版本号"</string>
     <string name="selinux_status" msgid="6212165375172061672">"SELinux 状态"</string>
+    <string name="cpu_type" msgid="410C2A9B00B122B8310">"处理器"</string>
+    <string name="software_version" msgid="610C2A9B00B12356310">"固件版本号"</string>
     <string name="device_info_not_available" msgid="8062521887156825182">"不可用"</string>
     <string name="device_status_activity_title" msgid="1411201799384697904">"状态信息"</string>
     <string name="device_status" msgid="607405385799807324">"状态信息"</string>
@@ -806,7 +808,7 @@
     <string name="status_prl_version" msgid="1007470446618081441">"PRL 版本"</string>
     <string name="status_meid_number" msgid="1751442889111731088">"MEID"</string>
     <string name="status_icc_id" msgid="943368755577172747">"ICCID"</string>
-    <string name="status_network_type" msgid="3279383550222116235">"手机网络类型"</string>
+    <string name="status_network_type" msgid="3279383550222116235">"移动网络类型"</string>
     <string name="status_latest_area_info" msgid="7222470836568238054">"运营商信息"</string>
     <string name="status_data_state" msgid="5503181397066522950">"移动网络状态"</string>
     <string name="status_service_state" msgid="2323931627519429503">"服务状态"</string>
@@ -1557,6 +1559,10 @@
     <string name="privacy_settings_title" msgid="4856282165773594890">"备份和重置"</string>
     <string name="backup_section_title" msgid="7952232291452882740">"备份和还原"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"个人数据"</string>
+    <string name="system_update_section_title" msgid="7815209034443782061">"系统升级"</string>
+    <string name="system_recovery_title" msgid="7815209034443782061">"Recovery模式"</string>
+    <string name="system_recovery_summary" msgid="7815209034443782061">"重启进入系统Recovery模式,可以清除分区数据或系统升级"</string>
+    <string name="system_recovery_dialog_massage" msgid="7815209034443782061">"立即重启进入系统Recovery模式,可以清除分区数据或系统升级？"</string>
     <string name="backup_data_title" msgid="1239105919852668016">"备份我的数据"</string>
     <string name="backup_data_summary" msgid="708773323451655666">"将应用数据、WLAN 密码和其他设置备份到 Google 服务器"</string>
     <string name="backup_configure_account_title" msgid="3790872965773196615">"备份帐户"</string>
