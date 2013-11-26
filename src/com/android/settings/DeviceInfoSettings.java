@@ -17,9 +17,7 @@
 package com.android.settings;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -39,14 +37,12 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DeviceInfoSettings extends SettingsPreferenceFragment {
+public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
 
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String FILENAME_MSV = "/sys/board_properties/soc/msv";
-    private static final String FILENAME_PROC_MEMINFO = "/proc/meminfo";
-    private static final String FILENAME_PROC_CPUINFO = "/proc/cpuinfo";
 
     private static final String KEY_CONTAINER = "container";
     private static final String KEY_TEAM = "team";
@@ -67,23 +63,26 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
-    /*private static final String KEY_MOD_VERSION = "mod_version";*/
-    private static final String KEY_OSR_VERSION = "osr_version";
-    private static final String KEY_MOD_BUILD_DATE = "build_date";
-    private static final String KEY_DEVICE_CPU = "device_cpu";
-    private static final String KEY_DEVICE_MEMORY = "device_memory";
-    /*private static final String KEY_CM_UPDATES = "cm_updates";*/
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
+
     long[] mHits = new long[3];
     int mDevHitCountdown;
     Toast mDevHitToast;
+
+    public DeviceInfoSettings() {
+        super(null /* Don't PIN protect the entire screen */);
+    }
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.device_info_settings);
+
+        // We only call ensurePinRestrictedPreference() when mDevHitCountdown == 0.
+        // This will keep us from entering developer mode without a PIN.
+        protectByRestrictions(KEY_BUILD_NUMBER);
 
         setStringSummary(KEY_FIRMWARE_VERSION, Build.VERSION.RELEASE);
         findPreference(KEY_FIRMWARE_VERSION).setEnabled(true);
@@ -94,11 +93,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
-        /*setValueSummary(KEY_MOD_VERSION, "ro.cm.version");
-        findPreference(KEY_MOD_VERSION).setEnabled(true);*/
-        setValueSummary(KEY_OSR_VERSION, "ro.osr.version");
-        findPreference(KEY_OSR_VERSION).setEnabled(true);
-        setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
@@ -107,33 +101,10 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
             String status = getResources().getString(R.string.selinux_status_permissive);
             setStringSummary(KEY_SELINUX_STATUS, status);
         }
-        findPreference(KEY_SELINUX_STATUS).setEnabled(true);
 
         // Remove selinux information if property is not present
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
                 PROPERTY_SELINUX_STATUS);
-
-        String cpuInfo = getCPUInfo();
-        String memInfo = getMemInfo();
-
-        // Only the owner should see the Updater settings, if it exists
-       /* if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            removePreferenceIfPackageNotInstalled(findPreference(KEY_CM_UPDATES));
-        } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_CM_UPDATES));
-        }*/
-
-        if (cpuInfo != null) {
-            setStringSummary(KEY_DEVICE_CPU, cpuInfo);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_CPU));
-        }
-
-        if (memInfo != null) {
-            setStringSummary(KEY_DEVICE_MEMORY, memInfo);
-        } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_MEMORY));
-        }
 
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
@@ -215,6 +186,11 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
             if (UserHandle.myUserId() != UserHandle.USER_OWNER) return true;
 
             if (mDevHitCountdown > 0) {
+                if (mDevHitCountdown == 1) {
+                    if (super.ensurePinRestrictedPreference(preference)) {
+                        return true;
+                    }
+                }
                 mDevHitCountdown--;
                 if (mDevHitCountdown == 0) {
                     getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
@@ -243,82 +219,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
                         Toast.LENGTH_LONG);
                 mDevHitToast.show();
-            }
-       /* } else if (preference.getKey().equals(KEY_MOD_VERSION)) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.putExtra("is_cid", true);
-                intent.setClassName("android",
-                        com.android.internal.app.PlatLogoActivity.class.getName());
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
-                }
-            }*/
-        } else if (preference.getKey().equals(KEY_OSR_VERSION)) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.setClassName("com.android.settings",
-                        com.android.internal.app.PlatLogoActivity.class.getName());
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
-                }
-            }
-        } else if (preference.getKey().equals(KEY_SELINUX_STATUS)) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                if (SELinux.isSELinuxEnabled()) {
-                    if (!SELinux.isSELinuxEnforced()) {
-                        /* Display the warning dialog */
-                        AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                        alertDialog.setTitle(R.string.selinux_enable_title);
-                        alertDialog.setMessage(getResources()
-                            .getString(R.string.selinux_enable_warning));
-                        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,
-                            getResources().getString(com.android.internal.R.string.ok),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    SELinux.setSELinuxEnforce(true);
-                                    String status = getResources()
-                                        .getString(R.string.selinux_status_enforcing);
-                                    setStringSummary(KEY_SELINUX_STATUS, status);
-                                }
-                            });
-                        alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE,
-                            getResources().getString(com.android.internal.R.string.cancel),
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            });
-                        alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                            public void onCancel(DialogInterface dialog) {
-                            }
-                        });
-                        alertDialog.show();
-
-                    } else {
-                        SELinux.setSELinuxEnforce(false);
-                    }
-                }
-
-                if (!SELinux.isSELinuxEnabled()) {
-                    String status = getResources().getString(R.string.selinux_status_disabled);
-                    setStringSummary(KEY_SELINUX_STATUS, status);
-                } else if (!SELinux.isSELinuxEnforced()) {
-                    String status = getResources().getString(R.string.selinux_status_permissive);
-                    setStringSummary(KEY_SELINUX_STATUS, status);
-                } else if (SELinux.isSELinuxEnforced()) {
-                    String status = getResources().getString(R.string.selinux_status_enforcing);
-                    setStringSummary(KEY_SELINUX_STATUS, status);
-                }
             }
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -440,45 +340,5 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
             // Fail quietly, returning empty string should be sufficient
         }
         return "";
-    }
-
-    private String getMemInfo() {
-        String result = null;
-        BufferedReader reader = null;
-
-        try {
-            /* /proc/meminfo entries follow this format:
-             * MemTotal:         362096 kB
-             * MemFree:           29144 kB
-             * Buffers:            5236 kB
-             * Cached:            81652 kB
-             */
-            String firstLine = readLine(FILENAME_PROC_MEMINFO);
-            if (firstLine != null) {
-                String parts[] = firstLine.split("\\s+");
-                if (parts.length == 3) {
-                    result = Long.parseLong(parts[1])/1024 + " MB";
-                }
-            }
-        } catch (IOException e) {}
-
-        return result;
-    }
-
-    private String getCPUInfo() {
-        String result = null;
-
-        try {
-            /* The expected /proc/cpuinfo output is as follows:
-             * Processor	: ARMv7 Processor rev 2 (v7l)
-             * BogoMIPS	: 272.62
-             */
-            String firstLine = readLine(FILENAME_PROC_CPUINFO);
-            if (firstLine != null) {
-                result = firstLine.split(":")[1].trim();
-            }
-        } catch (IOException e) {}
-
-        return result;
     }
 }

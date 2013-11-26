@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Łączenie"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Połączony"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Dostępny"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"W użyciu"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Ustawienia wyświetlacza"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Rozłączyć?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Spowoduje to zakończenie połączenia z:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Pokaż procesy z pamięci podręcznej"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Resetuj opcje aplikacji"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Zresetować opcje aplikacji?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Zresetuje to wszystkie ustawienia:\n\n "<li>"wyłączonych aplikacji,"</li>\n" "<li>"powiadomień wyłączonych aplikacji,"</li>\n" "<li>"domyślnych aplikacji dla wybranych czynności,"</li>\n" "<li>"ograniczeń danych w tle dla aplikacji,"</li>\n" "<li>"wszystkich ograniczeń uprawnień."</li>\n\n" Nie utracisz żadnych danych aplikacji."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Zresetowane będą wszystkie ustawienia:\n\n "<li>"Wyłączone aplikacje"</li>\n" "<li>"Wyłączone powiadomienia aplikacji"</li>\n" "<li>"Aplikacje domyślne"</li>\n" "<li>"Ograniczenia użycia danych w tle dla aplikacji."</li>\n\n" Nie utracisz żadnych danych."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Resetuj aplikacje"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Zarządzaj rozmiarem"</string>
     <string name="filter" msgid="2018011724373033887">"Filtr"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Control-spacja, by przełączyć"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Domyślna"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Układy klawiatury"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Słownik użytkownika"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Słownik osobisty"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Osobiste słowniki"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Słownik osobisty"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Dodaj"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Dodaj do słownika"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Dodaj w menu zasilania opcję zgłaszania błędów"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Pozostaw ekran włączony"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Ekran nie będzie gaszony podczas ładowania telefonu"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Włącz dziennik analizatora snoop Bluetooth HCI"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Przechwyć wszystkie pakiety Bluetooth HCI do pliku"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Wybierz czas wykonywania"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Wybierz czas wykonywania"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Uruchomić ponownie, by zmienić czas wykonywania z <xliff:g id="OLD">%1$s</xliff:g> na <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Pozorowanie lokalizacji"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Zezwalaj na pozorowanie lokalizacji"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Czy zezwalać na debugowanie USB?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Aplikacje muszą prosić o pozwolenie na odczyt karty SD"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Włączyć ochronę karty SD?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Gdy karta SD jest chroniona, aplikacje muszą prosić o pozwolenie na odczyt danych z tego nośnika zewnętrznego.\n\nNiektóre aplikacje mogą przestać działać i wymagać aktualizacji przez programistę."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Terminal lokalny"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Włącz terminal, który umożliwia dostęp do powłoki lokalnej"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Wybierz gadżet"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Wybierz widżet"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Utworzyć widżet i zezwolić na dostęp?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"TalkBack odczytuje zawartość ekranu, pomagając użytkownikom niewidomym i niedowidzącym. Czy chcesz zainstalować tę usługę za darmo z Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Brak opisu"</string>
     <string name="settings_button" msgid="3006713718908152930">"Ustawienia"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Drukowanie"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Ustawienia drukowania"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Usługi"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Użyć usługi <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> może odbierać drukowane przez Ciebie dokumenty, które mogą zawierać poufne dane."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Brak zainstalowanych usług"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Ustawienia"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Dodaj drukarki"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"Włączone"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Wyłączone"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Bateria"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Gdzie wykorzystywana jest bateria"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Brak danych o zużyciu baterii"</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Praca Wi-Fi"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Tablet"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Telefon"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Dane wysłane"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Dane odebrane"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Dane komórkowe zostały wysłane"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Dane komórkowe zostały odebrane"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Dane Wi‑Fi zostały wysłane"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Dane Wi‑Fi zostały odebrane"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Dźwięk"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Wideo"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Czas włączenia"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Tony"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Określa ton czytanego tekstu"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Język"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Nie wybrano języka"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Ustawia zależny od języka głos dla czytanych tekstów"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Posłuchaj przykładu"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Odtwórz krótką prezentację syntezy mowy"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Podświetlaj elementy w oknach jeśli są rysowane przez GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Pokaż zmiany warstw sprzęt."</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Oznaczaj aktualizowane warstwy sprzętowe na zielono"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Pokaż przeciągnięcie GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Najlepszy-najg.: nieb., ziel., jasnoczerw., czerw."</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Debuguj przerysowania GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Wyłącz nakładki HW"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Zawsze używaj GPU do komponowania ekranu"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Włącz śledzenia OpenGL"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"To ustawienie obowiązuje wszystkich użytkowników tego telefonu."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Zmień język"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Zmień rozmiar czcionki"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Ograniczenia"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Usuń ograniczenia"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Zmień PIN"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Pokaż powiadomienia"</string>
     <string name="help_label" msgid="1107174367904110532">"Pomoc"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Konto na materiały"</string>

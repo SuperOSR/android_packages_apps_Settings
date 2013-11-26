@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Tilslutter"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Tilsluttet"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Tilgængelig"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"I brug"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Skærmindstillinger"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Vil du afbryde forbindelsen?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Dette vil afslutte din forbindelse til:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Cachelagrede processer"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Nulstil app-præferencer"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Nulstil app-præferencer?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Dette vil nulstille alle præferencer for:\n\n "<li>"deaktiverede apps"</li>\n" "<li>"deaktiverede appunderretninger"</li>\n" "<li>"standardapplikationer til handlinger"</li>\n" "<li>"begrænsning af baggrundsdata for apps"</li>\n" "<li>"eventuelle begrænsede tilladelser"</li>\n\n" Du vil ikke miste nogen appdata."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Dette vil nulstille alle præferencer for:\n\n"<li>"deaktiverede apps"</li>\n<li>"underretninger om deaktiverede apps"</li>\n<li>"standardapplikationer til handlinger"</li>\n<li>"begrænsninger for baggrundsdata for apps"</li>\n\n"Du vil ikke miste nogen appdata."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Nulstil apps"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Administrer plads"</string>
     <string name="filter" msgid="2018011724373033887">"Filter"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Tryk på Ctrl-Mellemrum for at skifte"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Standard"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Tastaturlayout"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Brugerordbog"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Personlig ordbog"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Personlige ordbøger"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Personlig ordbog"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Tilføj"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Føj til ordbog"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Gør det muligt at rapportere fejl i menuen til startknappen"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Undgå dvale"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Skærmen går ikke i dvale under opladning"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Aktivér Bluetooth HCI snoop log"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Gem alle Bluetooth HCI-pakker i en fil"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Vælg kørsel"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Vælg kørsel"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Genstart for at skifte kørsel fra <xliff:g id="OLD">%1$s</xliff:g> til <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Imiterede placeringer"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Tillad imiterede placeringer"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Vil du tillade USB-fejlretning?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Apps skal anmode om tilladelse til at læse SD-kortet"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Vil du beskytte SD-kortet?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Når SD-kortet er beskyttet, skal apps anmode om tilladelse til at læse data fra et eksternt lager.\n\nNogle apps fungerer muligvis ikke, før de opdateres af deres udviklere."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Lokal terminal"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Aktivér terminalappen, der giver lokal shell-adgang"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Vælg gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Vælg widget"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Vil du oprette en widget og tillade adgang?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"TalkBack giver talefeedback for at hjælpe blinde og svagtseende brugere. Vil du installere det gratis fra Android Marked?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Ingen beskrivelse til rådighed."</string>
     <string name="settings_button" msgid="3006713718908152930">"Indstillinger"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Udskrivning"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Indstillinger for udskrivning"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Tjenester"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Vil du bruge <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> kan modtage dokumenter, du udskriver. Sådanne dokumenter kan indeholde følsomme oplysninger."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Der er ikke installeret nogen tjenester"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Indstillinger"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Tilføj printere"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"Til"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Fra"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Batteri"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Hvad der har brugt batteriet"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Batteribrugsdata utilgængeligt."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi aktiv"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Tablet"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Telefon"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Data sendt"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Data modtaget"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Mobildata blev sendt"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Mobildata blev modtaget"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Wi-Fi-data blev sendt"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Wi-Fi-data blev modtaget"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Lyd"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Video"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Tid til"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Tonehøjde"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Påvirker tonen af den talte tekst"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Sprog"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Der er ikke valgt sprog"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Angiver det sprog, der skal bruges til oplæsning af tekst"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Lyt til et eksempel"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Afspil en kort demonstration af talesyntese"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Fremhæv visninger i vinduer, når de tegnes med GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Se opdat. af hardwarelag"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Hardwarelag blinker grønt, når de opdateres"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Vis GPU-overdraw"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Fra bedst til værst: blå, grøn, lys rød, rød"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Ret GPU-overlapsfejl"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Deaktiver HW-overlejring"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Brug altid GPU til skærmsammensætning"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Aktivér OpenGL-spor"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Denne indstilling påvirker alle brugere på denne telefon."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Skift sprog"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Skift skriftstørrelse"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Begrænsninger"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Fjern begrænsninger"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Skift pinkode"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Vis meddelelser"</string>
     <string name="help_label" msgid="1107174367904110532">"Hjælp"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Konto til indhold"</string>

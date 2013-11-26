@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Падключэнне"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Падключана"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Даступна"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"Выкарыстоўваецца"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Налады экрана"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Адключыцца?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Будзе завершана вашай сувящь з прыладай :&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1110,8 +1111,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Паказаць кэшаваныя працэсы"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Скід налад прыкладання"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Скінуць налады прыкладання?"</string>
-    <!-- no translation found for reset_app_preferences_desc (4822447731869201512) -->
-    <skip />
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Гэта дазволіць скінуць усе налады для:\n\n"<li>"адключаных прыкладанняў"</li>\n<li>"адключаных паведамленняў прыкладанняў"</li>\n<li>"прыкладанняў па змаўчанні для дзеянняў"</li>\n<li>"абмежаванняў фонавых дадзеных для прыкладанняў"</li>\n\n"Вы не страціце дадзеныя прыкладанняў."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Скід прыкладанняў"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Кіраванне вольным месцам"</string>
     <string name="filter" msgid="2018011724373033887">"Фільтр"</string>
@@ -1246,9 +1246,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Каб перакл., націсніце Ctrl-Space"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Па змаўчанні"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Раскладкі клавіятуры"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Карыстальніцкі слоўнік"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Асабісты слоўнік"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Асабістыя слоўнікі"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Персанальны слоўнік"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Дадаць"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Дадаць у слоўнік"</string>
@@ -1309,6 +1307,16 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Уключыце параметр у меню сiлкавання, каб прыняць справаздачу пра памылку"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Прадухіляць ад пераходу ў рэжым сну"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Экран ніколі не ўвайдзе ў рэжым сну падчас зарадкі"</string>
+    <!-- no translation found for bt_hci_snoop_log (3340699311158865670) -->
+    <skip />
+    <!-- no translation found for bt_hci_snoop_log_summary (730247028210113851) -->
+    <skip />
+    <!-- no translation found for select_runtime_title (649783802363155346) -->
+    <skip />
+    <!-- no translation found for select_runtime_dialog_title (5314872813037493958) -->
+    <skip />
+    <!-- no translation found for select_runtime_warning_message (1937574953265648165) -->
+    <skip />
     <string name="allow_mock_location" msgid="2787962564578664888">"Дазволіць несапраўдныя месцы"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Дазволіць несапраўдныя месцы"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Дазволіць адладку USB?"</string>
@@ -1326,6 +1334,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Прыкладанні павінны запытваць дазвол на чытанне SD-карты"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Абараніць SD-карту?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Калі SD-карта абаронена, прыкладанні павінны запытваць дазвол на чытанне дадзеных са знешняй памяці.\n\nНекаторыя прыкладанні могуць не працаваць, пакуль не будуць абноўлены распрацоўшчыкамі."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Лакальны тэрмінал"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Уключэнне прыкладання тэрмінала, якое прапануе доступ да лакальнай абалонкі"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Выберыце гаджэт"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Выберыце віджэт"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Стварыць віджэт і дазволіць доступ?"</string>
@@ -1372,6 +1382,26 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"Прыкладанне TalkBack забяспечвае вусную зваротную сувязь, каб дапамагаць сляпым карыстальнікам і карыстальнікам з дрэнным зрокам. Усталяваць яго бясплатна з Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Няма апісання."</string>
     <string name="settings_button" msgid="3006713718908152930">"Налады"</string>
+    <!-- no translation found for print_settings (4742428530112487843) -->
+    <skip />
+    <!-- no translation found for print_settings_title (4911263339115736689) -->
+    <skip />
+    <!-- no translation found for print_services_title (1088097751249445946) -->
+    <skip />
+    <!-- no translation found for print_service_security_warning_title (2338435517408144841) -->
+    <skip />
+    <!-- no translation found for print_service_security_warning_summary (919299459931111450) -->
+    <skip />
+    <!-- no translation found for print_no_services_installed (8443039625463872294) -->
+    <skip />
+    <!-- no translation found for print_menu_item_settings (6591330373682227082) -->
+    <skip />
+    <!-- no translation found for print_menu_item_add_printers (2890738028215834012) -->
+    <skip />
+    <!-- no translation found for print_feature_state_on (8098901852502441048) -->
+    <skip />
+    <!-- no translation found for print_feature_state_off (7294876968403966040) -->
+    <skip />
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Батарэя"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"На што расходуецца акумулятар"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Адсутнiчаюць дадзеныя пра выкарыстанне акумулятара."</string>
@@ -1411,8 +1441,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi працуе"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Планшэт"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Тэлефон"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Пераданыя дадзеныя"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Атрыманыя дадзеныя"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Мабільныя дадзеныя адпраўлены"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Атрыманы мабільныя дадзеныя"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Дадзеныя ў сетцы Wi-Fi адпраўлены"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Атрыманы дадзеныя ў сетцы Wi-Fi"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Аўдыё"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Відэа"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Час працы"</string>
@@ -1466,6 +1498,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Тон"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Уплывае на тон вуснага тэксту"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Мова"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Мова не выбрана"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Задае голас прамаўлення тэкту на канкрэтнай мове"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Паслухайце прыклад"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Прайграць кароткую дэманстрацыю сінтэзу гаворкі"</string>
@@ -1682,8 +1715,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Мігнуць вакном пры чарчэнні з дапамогай GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Паказаць абнаўленнi апаратнага пласта"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Апаратныя пласты набываюць зялёны колер, калi абнаўляюцца"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Паказаць перарасход GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Ад лепшага да горшага: сіні, зялёны, светла-чырвоны, чырвоны"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Адладка перамалёўкі GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Адкл. апаратн. накладання"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Заўсёды выкарыстоўваць GPU для экраннай кампаноўкі"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Уключэнне слядоў OpenGL"</string>
@@ -1881,6 +1913,12 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Гэты параметр распаўсюджвае на ўсіх карыстальнікаў гэтага тэлефона."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Змяніць мову"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Змяніць памер шрыфту"</string>
+    <!-- no translation found for restriction_settings_title (4233515503765879736) -->
+    <skip />
+    <!-- no translation found for restriction_menu_reset (2067644523489568173) -->
+    <skip />
+    <!-- no translation found for restriction_menu_change_pin (740081584044302775) -->
+    <skip />
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Паказваць паведамленні"</string>
     <string name="help_label" msgid="1107174367904110532">"Даведка"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Уліковы запіс для змесціва"</string>

@@ -171,8 +171,8 @@
     <string name="normal_date_format" msgid="7636406984925498359">"Regional (<xliff:g id="DATE">%s</xliff:g>)"</string>
     <string name="display_preview_label" msgid="1127597250917274792">"Previsualitza:"</string>
     <string name="display_font_size_label" msgid="8941851418397475389">"Cos de lletra:"</string>
-    <string name="intent_sender_data_label"><xliff:g id="data">Data:</xliff:g></string>
-
+    <!-- no translation found for intent_sender_data_label (6332324780477289261) -->
+    <skip />
     <string name="intent_sender_sendbroadcast_text" msgid="1415735148895872715">"Envia <xliff:g id="BROADCAST">broadcast</xliff:g>"</string>
     <string name="intent_sender_action_label" msgid="616458370005452389">"<xliff:g id="ACTION">Action</xliff:g>:"</string>
     <string name="intent_sender_startactivity_text" msgid="5080516029580421895">"Inicia <xliff:g id="ACTIVITY">activity</xliff:g>"</string>
@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"S\'està connectant"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Connectada"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Disponible"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"En ús"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Mostra la configuració"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Vols desconnectar-te?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Això posarà fi a la teva connexió amb:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Mostra processos cau"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Restableix preferències"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Vols rest. pref. aplic.?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Amb aquesta acció, es restabliran les preferències dels elements següents:\n\n "<li>"Aplicacions desactivades"</li>\n" "<li>"Notificacions d\'aplicacions desactivades"</li>\n" "<li>"Aplicacions predeterminades per a les accions"</li>\n" "<li>"Restriccions de dades en segon pla per a les aplicacions"</li>\n" "<li>"Restriccions de permisos"</li>\n\n" No perdràs les dades de les aplicacions."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Es restabliran totes les preferències per a:\n\n "<li>"Aplicacions desactivades"</li>\n" "<li>"Notificacions de l\'aplicació desactivades"</li>\n" "<li>"Aplicacions predeterminades per a accions"</li>\n" "<li>"Restriccions de dades en segon pla per a aplicacions"</li>\n\n" No perdràs les dades de les aplicacions."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Restableix les aplicac."</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Gestiona l\'espai"</string>
     <string name="filter" msgid="2018011724373033887">"Filtre"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Per canviar, prem Ctrl + barra espaiadora"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Predeterminat"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Disposicions de teclat"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Diccionari de l\'usuari"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Diccionari personal"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Diccionaris personals"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Diccionari personal"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Afegeix"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Afegir al diccionari"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Inclou l\'opció de fer un informe d\'error al menú d\'encesa"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Pantalla activa"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"La pantalla no entra mai en mode de repòs si el dispositiu està carregant-se"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Activa el registre de cerca HCI de Bluetooth"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Captura tots els paquets HCI de Bluetooth en un fitxer"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Selecciona temps execució"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Selecciona temps execució"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Vols tornar a iniciar per canviar el temps d\'execució de <xliff:g id="OLD">%1$s</xliff:g> a <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Permet les ubicacions simulades"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Permet les ubicacions simulades"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Voleu permetre la depuració USB?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Les aplicacions han de sol·licitar permís per llegir la targeta SD"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Vols protegir la targeta SD?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Si la targeta SD està protegida, les aplicacions han de sol·licitar permís per llegir les dades de l\'emmagatzematge extern.\n\nÉs possible que algunes aplicacions no funcionin fins que els desenvolupadors no les actualitzin."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Terminal local"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Activa l\'aplicació de terminal que ofereix accés al shell local"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Selecció de gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Selecció de widget"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Vols crear el widget i permetre l\'accés?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"TalkBack proporciona comentaris per veu per ajudar usuaris invidents i amb visió disminuïda. Vols instal·lar-lo de manera gratuïta des d\'Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"No s\'ha proporcionat cap descripció."</string>
     <string name="settings_button" msgid="3006713718908152930">"Configuració"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Impressió"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Configuració d\'impressió"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Serveis"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Vols fer servir <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> pot rebre els documents que imprimeixis. És possible que aquests documents continguin dades confidencials."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"No hi ha cap servei instal·lat"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Configuració"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Afegeix impressores"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"Activat"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Desactivat"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Bateria"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Elements que han utilitzat la bateria"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Dades d\'ús de bateria no disp."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi en execució"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Tauleta"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Telèfon"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Dades enviades"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Dades rebudes"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"S\'han enviat les dades mòbils"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"S\'han rebut les dades mòbils"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"S\'han enviat les dades Wi‑Fi"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"S\'han rebut les dades Wi‑Fi"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Àudio"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Vídeo"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Temps d\'activació"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"To"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Afecta el to del text parlat"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Idioma"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"No has seleccionat cap idioma"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Defineix la llengua utilitzada per a la síntesi de veu"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Vull escoltar un exemple"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Reprodueix una breu demostració de síntesi de veu"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Actualitza vistes de finestres creades amb GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Mostra actualitzacions capes"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Il·lumina capes de maquinari en verd en actualitzar-se"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Mostra superació de GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"De millor a pitjor: blau, verd, vermell clar, vermell"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Depura modificacions GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Desactiva superposicions HW"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Usa sempre GPU per combinar pantalles"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Activa seguiment d\'OpenGL"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Aquesta configuració afecta tots els usuaris del telèfon."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Canvi de l\'idioma"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Canvi del cos de lletra"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Restriccions"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Suprimeix restriccions"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Canvia el PIN"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Mostra les notificacions"</string>
     <string name="help_label" msgid="1107174367904110532">"Ajuda"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Compte per al contingut"</string>

@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Ansluter"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Anslutna"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Tillgängliga"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"Används"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Skärminställningar"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Vill du koppla från?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Detta avslutar din anslutning till:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -614,7 +615,7 @@
     <string name="wifi_disabled_generic" msgid="4259794910584943386">"Inaktiverad"</string>
     <string name="wifi_disabled_network_failure" msgid="3111321240793227690">"Undvek dålig Internetanslutning"</string>
     <string name="wifi_disabled_password_failure" msgid="8659805351763133575">"Autentiseringsproblem"</string>
-    <string name="wifi_not_in_range" msgid="1136191511238508967">"Inte inom räckhåll"</string>
+    <string name="wifi_not_in_range" msgid="1136191511238508967">"Utom räckhåll"</string>
     <string name="wifi_wps_available_first_item" msgid="4422547079984583502">"WPS tillgängligt"</string>
     <string name="wifi_wps_available_second_item" msgid="8427520131718215301">" (WPS tillgängligt)"</string>
     <string name="wifi_secured_first_item" msgid="4072076186051083451">"Skyddad med <xliff:g id="WIFI_SECURITY_SHORT">%1$s</xliff:g>"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Visa cachade processer"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Återställ inställningarna"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Vill du återställa?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Det återställer alla inställningar för:\n\n "<li>"Inaktiverade appar"</li>\n" "<li>"Inaktiverade appmeddelanden"</li>\n" "<li>"Standardappar för åtgärder"</li>\n" "<li>"Begränsningar i bakgrundsdata för appar"</li>\n" "<li>"Begränsningar för alla behörigheter"</li>\n\n" Ingen appdata kommer att försvinna."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Detta återställer alla inställningar för:\n\n "<li>"inaktiverade appar"</li>\n" "<li>"meddelanden om inaktiverade appar"</li>\n" "<li>"standardappar för olika åtgärder"</li>\n" "<li>"begränsningar för bakgrundsdata i appar."</li>\n\n" Inga appdata går förlorade."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Återställ appar"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Hantera utrymme"</string>
     <string name="filter" msgid="2018011724373033887">"Filtrera"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Växla genom att trycka på Ctrl-Mellanslag"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Standard"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Tangentbordslayouter"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Användarens ordlista"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Egen ordlista"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Egna ordlistor"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Egen ordlista"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Lägg till"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Lägg till i ordlista"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Inkludera alternativet att skapa en felrapport på startmenyn"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Håll aktiverad"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Skärmen vilar aldrig när laddning pågår"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Aktivera HCI snoop-logg för Bluetooth"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Samla alla HCI-paket för Bluetooth i en fil"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Välj körningstid"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Välj körningstid"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Vill du starta om och ändra körningstiden från <xliff:g id="OLD">%1$s</xliff:g> till <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Tillåt skenplatser"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Tillåt skenplatser"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Ska USB-felsökning tillåtas?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Appar måste få tillstånd för att kunna läsa SD-kortet"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Vill du skydda SD-kortet?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"När SD-kortet är skyddat måste apparna begära tillstånd för att kunna läsa data som lagras externt.\n\nEn del appar måste eventuellt uppdateras av utvecklaren för att fungera."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Lokal terminal"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Aktivera en terminalapp som ger åtkomst till hyllor lokalt"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Välj gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Välj widget"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Skapa widget och tillåta åtkomst?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"TalkBack ger talad feedback till användare som är blinda eller har nedsatt syn. Vill du installera den gratis från Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Ingen beskrivning har angetts."</string>
     <string name="settings_button" msgid="3006713718908152930">"Inställningar"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Skriver ut"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Utskriftsinställningar"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Tjänster"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Vill du använda <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> kan ta emot dokument som du skriver ut. Sådana dokument kan innehålla känsliga uppgifter."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Inga tjänster är installerade"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Inställningar"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Lägg till skrivare"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"På"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Av"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Batteri"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Appar som har förbrukat batteriet"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Batteriinfo ej tillgänglig."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi körs"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Surfplatta"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Telefon"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Skickade data"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Mottagna data"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Mobildata har skickats"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Mobildata har mottagits"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Data via Wi-Fi har skickats"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Data via Wi-Fi har mottagits"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Ljud"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Video"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Tid aktiverad"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Ton"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Påverkar den talade textens ton"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Språk"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Inget språk valt"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Ange språkspecifik röst för den talade texten"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Lyssna på ett exempel"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Spela upp en kort demonstration av talsyntes"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Visningar blinkar i fönster vid GPU-ritningar"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Visa maskinvaruskiktuppd."</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Låt maskinvaruskikt blinka grönt vid uppdateringar"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Visa GPU-flerlagerritning"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Från bäst till sämst: blå, grön, ljusröd, röd"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Felsök överskriden GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Inaktivera HW-överlagringar"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Använd alltid GPU för skärmsammansättning"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Aktivera OpenGL-spår"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Den här inställningen påverkar samtliga användare."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Ändra språk"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Ändra teckenstorlek"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Begränsningar"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Ta bort begränsningar"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Ändra PIN-koden"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Visa meddelanden"</string>
     <string name="help_label" msgid="1107174367904110532">"Hjälp"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Konto för innehåll"</string>

@@ -481,7 +481,7 @@
     <string name="bluetooth_disconnect_pan_nap_profile" product="tablet" msgid="5455448395850929200">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> буде від’єднано від доступу через цей планшетний ПК до Інтернету."</string>
     <string name="bluetooth_disconnect_pan_nap_profile" product="default" msgid="5266851881175033601">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> буде від’єднано від доступу через цей телефон до Інтернету."</string>
     <string name="bluetooth_device_advanced_title" msgid="6066342531927499308">"Спарений пристрій Bluetooth"</string>
-    <string name="bluetooth_device_advanced_online_mode_title" msgid="3689050071425683114">"Підключити"</string>
+    <string name="bluetooth_device_advanced_online_mode_title" msgid="3689050071425683114">"Підключ."</string>
     <string name="bluetooth_device_advanced_online_mode_summary" msgid="1204424107263248336">"Підключ. до пристрою Bluetooth"</string>
     <string name="bluetooth_device_advanced_profile_header_title" msgid="3764437426089639639">"Профілі"</string>
     <string name="bluetooth_device_advanced_rename_device" msgid="5148578059584955791">"Перейменувати"</string>
@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Під’єднуються"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Під’єднані"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Доступні"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"Використовується"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Налаштування відображення"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Від’єднатися?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Це призведе до роз’єднання з пристроєм:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -688,6 +689,7 @@
     <string name="ring_volume_title" msgid="7938706566797464165">"Гучність дзвінка"</string>
     <string name="vibrate_in_silent_title" msgid="3897968069156767036">"Вібр. в беззвуч. реж."</string>
     <string name="notification_sound_title" msgid="5137483249425507572">"Звук сповіщення за умовчанням"</string>
+    <string name="notification_pulse_title" msgid="1247988024534030629">"Блим. світл. сигн. сповіщ."</string>
     <string name="incoming_call_volume_title" msgid="8073714801365904099">"Мелодія"</string>
     <string name="notification_volume_title" msgid="2012640760341080408">"Сповіщення"</string>
     <string name="checkbox_notification_same_as_incoming_call" msgid="1073644356290338921">"Викор. гучність вхідних дзвінків для сповіщень"</string>
@@ -1076,7 +1078,7 @@
     <string name="clear_cache_btn_text" msgid="5756314834291116325">"Очистити кеш"</string>
     <string name="cache_size_label" msgid="7505481393108282913">"Кеш"</string>
     <string name="controls_label" msgid="7611113077086853799">"Ел. керув."</string>
-    <string name="force_stop" msgid="7435006169872876756">"Зупинити"</string>
+    <string name="force_stop" msgid="7435006169872876756">"Примус.припин."</string>
     <string name="total_size_label" msgid="1048676419552557254">"Усього"</string>
     <string name="application_size_label" msgid="8494609207373874267">"Програма"</string>
     <string name="external_code_size_label" msgid="3459343140355961335">"Програма на носії USB"</string>
@@ -1104,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Показати кешовані процеси"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Скинути налашт-ня програм"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Скинути налашт. програм?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Буде скинуто всі налаштування для:\n\n "<li>"вимкнених програм"</li>\n" "<li>"вимкнених сповіщень програм"</li>\n" "<li>"програм за умовчанням для виконання дій"</li>\n" "<li>"обмежень щодо фонових даних для програм"</li>\n" "<li>"усіх обмежень щодо дозволів"</li>\n\n" Жодні дані програм не буде втрачено."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Ця дія скине всі налаштування для:\n\n "<li>"вимкнених програм"</li>\n" "<li>"вимкнених сповіщень програм"</li>\n" "<li>"дій у програмах за умовчанням"</li>\n" "<li>"обмежень щодо фонових даних для програм"</li>\n\n" Жодні дані програм не буде втрачено."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Скинути програми"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Кер. простором"</string>
     <string name="filter" msgid="2018011724373033887">"Фільтрув."</string>
@@ -1239,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Щоб переключити, натис. Ctrl–Пробіл"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"За умовчанням"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Розкладки клавіатури"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Словник корист-ча"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Особистий словник"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Особисті словники"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Особистий словник"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Додати"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Додати до словника"</string>
@@ -1302,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Внести в меню \"Живлення\" опцію створення повідомлень про помилку"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Залишати активним"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Екран не засинатиме під час заряджання"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Увімкнути журнал відстеження інтерфейсу Bluetooth"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Робити знімки всіх пакетів інтерфейсу Bluetooth у файлі"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Вибрати робочий цикл"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Вибрати робочий цикл"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Перезавантажити, щоб змінити робочий цикл із <xliff:g id="OLD">%1$s</xliff:g> на <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Фіктивні місцезнаходження"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Дозв. фіктивні місцезн."</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Дозвол. налагодж. USB?"</string>
@@ -1319,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Програми мають запитувати дозвіл на читання карти SD"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Захистити карту SD?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Якщо карту SD захищено, програми мають запитувати дозвіл на читання даних із зовнішньої пам’яті.\n\nДеякі програми можуть не працювати до оновлення своїми розробниками."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Локальний термінал"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Увімк. програму-термінал, що надає локальний доступ до оболонки"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Вибрати віджет"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Вибрати віджет"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Створити віджет і дозволити доступ?"</string>
@@ -1365,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"Функція TalkBack забезпечує мовне голосове відтворення для користувачів із вадами зору. Хочете встановити її безкоштовно з Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Немає опису."</string>
     <string name="settings_button" msgid="3006713718908152930">"Налаштування"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Друк"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Налаштування друку"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Служби"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Використовувати <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> отримуватиме документи, які ви друкуєте. Такі документи можуть містити конфіденційну інформацію."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Не встановлено жодну службу"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Налаштування"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Додати принтери"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"Увімк."</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Вимк."</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Акумулятор"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"На що споживається заряд акумулятора"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Дані використання акумулятора недоступні"</string>
@@ -1404,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi працює"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Пристрій"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Телефон"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Надісл. дані"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Отримані дані"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Мобільні дані надіслано"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Мобільні дані отримано"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Дані Wi‑Fi надіслано"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Дані Wi‑Fi отримано"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Звук"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Відео"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Час роботи"</string>
@@ -1459,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Вис. зв."</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Впливає на тон відтворюваного тексту"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Мова"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Мову не вибрано"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Устан. голос для відтворюваного тексту залежно від мови"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Прослухайте приклад"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Відтворити коротку демонстрацію синтезу мови"</string>
@@ -1675,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Підсвічув. область у вікні під час рисування з GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Показ. апаратні оновлення"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Виділяти апаратні рівні зеленим під час оновлення"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Показати накладання GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Від кращого до гіршого: синій, зелений, світло-червоний, червоний"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Налагодити накладання GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Вимк. апаратн. накладання"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Завжди використовувати GPU для компонування екрана"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Увімк. трасування OpenGL"</string>
@@ -1874,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Це налаштування впливає на всіх користувачів цього телефону."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Змінити мову"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Змінити розмір шрифту"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Обмеження"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Зняти обмеження"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Змінити PIN-код"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Показати сповіщення"</string>
     <string name="help_label" msgid="1107174367904110532">"Довідка"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Обліковий запис для вмісту"</string>

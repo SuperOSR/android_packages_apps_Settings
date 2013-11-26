@@ -16,8 +16,10 @@
 
 package com.android.settings.wifi;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiWatchdogStateMachine;
@@ -44,16 +46,26 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     private static final String KEY_MAC_ADDRESS = "mac_address";
     private static final String KEY_CURRENT_IP_ADDRESS = "current_ip_address";
     private static final String KEY_FREQUENCY_BAND = "frequency_band";
-    private static final String KEY_COUNTRY_CODE = "wifi_countrycode";
     private static final String KEY_NOTIFY_OPEN_NETWORKS = "notify_open_networks";
     private static final String KEY_SLEEP_POLICY = "sleep_policy";
     private static final String KEY_POOR_NETWORK_DETECTION = "wifi_poor_network_detection";
     private static final String KEY_SCAN_ALWAYS_AVAILABLE = "wifi_scan_always_available";
     private static final String KEY_INSTALL_CREDENTIALS = "install_credentials";
     private static final String KEY_SUSPEND_OPTIMIZATIONS = "suspend_optimizations";
-    private static final String KEY_WIFI_PRIORITY = "wifi_priority";
 
     private WifiManager mWifiManager;
+
+    private IntentFilter mFilter;
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(WifiManager.LINK_CONFIGURATION_CHANGED_ACTION) ||
+                action.equals(WifiManager.NETWORK_STATE_CHANGED_ACTION)) {
+                refreshWifiInfo();
+            }
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,13 +77,24 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        mFilter = new IntentFilter();
+        mFilter.addAction(WifiManager.LINK_CONFIGURATION_CHANGED_ACTION);
+        mFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         initPreferences();
+        getActivity().registerReceiver(mReceiver, mFilter,
+                android.Manifest.permission.CHANGE_NETWORK_STATE, null);
         refreshWifiInfo();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        getActivity().unregisterReceiver(mReceiver);
     }
 
     private void initPreferences() {
@@ -129,17 +152,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             }
         }
 
-        ListPreference ccodePref = (ListPreference) findPreference(KEY_COUNTRY_CODE);
-        if (ccodePref != null) {
-            ccodePref.setOnPreferenceChangeListener(this);
-            String value = mWifiManager.getCountryCode();
-            if (value != null) {
-                ccodePref.setValue(value);
-            } else {
-                Log.e(TAG, "Failed to fetch country code");
-            }
-        }
-
         ListPreference sleepPolicyPref = (ListPreference) findPreference(KEY_SLEEP_POLICY);
         if (sleepPolicyPref != null) {
             if (Utils.isWifiOnly(getActivity())) {
@@ -153,9 +165,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             sleepPolicyPref.setValue(stringValue);
             updateSleepPolicySummary(sleepPolicyPref, stringValue);
         }
-
-        Preference wifiPriority = findPreference(KEY_WIFI_PRIORITY);
-        wifiPriority.setEnabled(mWifiManager.isWifiEnabled());
     }
 
     private void updateSleepPolicySummary(Preference sleepPolicyPref, String value) {
@@ -220,16 +229,6 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
                 updateFrequencyBandSummary(preference, value);
             } catch (NumberFormatException e) {
                 Toast.makeText(getActivity(), R.string.wifi_setting_frequency_band_error,
-                        Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        }
-
-        if (KEY_COUNTRY_CODE.equals(key)) {
-            try {
-                mWifiManager.setCountryCode((String) newValue, true);
-            } catch (IllegalArgumentException e) {
-                Toast.makeText(getActivity(), R.string.wifi_setting_countrycode_error,
                         Toast.LENGTH_SHORT).show();
                 return false;
             }

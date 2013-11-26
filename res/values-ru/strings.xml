@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,8 +12,10 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="yes" msgid="4676390750360727396">"Да"</string>
     <string name="no" msgid="6731231425810196216">"Нет"</string>
     <string name="create" msgid="3578857613172647409">"Создать"</string>
@@ -24,7 +26,7 @@
     <item quantity="one" msgid="5295687242294085452">"Вы почти у цели. Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)."</item>
     <item quantity="other" msgid="6722953419953594148">"Вы почти у цели. Осталось несколько шагов (<xliff:g id="STEP_COUNT">%1$d</xliff:g>)."</item>
   </plurals>
-    <string name="show_dev_on" msgid="1110711554982716293">"Вы активировали настройки для разработчика!"</string>
+    <string name="show_dev_on" msgid="1110711554982716293">"Вы стали разработчиком!"</string>
     <string name="show_dev_already" msgid="2151632240145446227">"Не нужно, вы уже разработчик."</string>
     <string name="header_category_wireless_networks" msgid="4944823405420438623">"БЕСПРОВОДНЫЕ СЕТИ"</string>
     <string name="header_category_device" msgid="5781174212691167553">"УСТРОЙСТВО"</string>
@@ -133,10 +135,10 @@
     <string name="bluetooth_connected_no_a2dp" msgid="4576188601581440337">"Подключено (кроме A2DP)"</string>
     <string name="bluetooth_connected_no_headset_no_a2dp" msgid="9195757766755553810">"Подключено (кроме HSP/HFP/A2DP)"</string>
     <string name="bluetooth_disconnected" msgid="6557104142667339895">"Отключено"</string>
-    <string name="bluetooth_disconnecting" msgid="8913264760027764974">"Отключение\u2026"</string>
-    <string name="bluetooth_connecting" msgid="8555009514614320497">"Подключение\u2026"</string>
+    <string name="bluetooth_disconnecting" msgid="8913264760027764974">"Отключение..."</string>
+    <string name="bluetooth_connecting" msgid="8555009514614320497">"Подключение..."</string>
     <string name="bluetooth_unknown" msgid="644716244548801421"></string>
-    <string name="bluetooth_pairing" msgid="1426882272690346242">"Сопряжение\u2026"</string>
+    <string name="bluetooth_pairing" msgid="1426882272690346242">"Сопряжение..."</string>
     <string name="bluetooth_device" msgid="5291950341750186887">"Bluetooth-устройство без названия"</string>
     <string name="progress_scanning" msgid="192587958424295789">"Поиск"</string>
     <string name="bluetooth_no_devices_found" msgid="1085232930277181436">"Устройства Bluetooth не найдены."</string>
@@ -147,12 +149,12 @@
     <string name="device_picker" msgid="8398232791303186677">"Выбор устройства"</string>
     <string name="bluetooth_permission_request" msgid="1523129741266262748">"Запрос разрешения на включение Bluetooth"</string>
     <string name="bluetooth_ask_enablement" msgid="637355677176904990">"Приложение запрашивает разрешение включить Bluetooth."</string>
-    <string name="bluetooth_ask_discovery" product="tablet" msgid="786921566047356213">"Одному из приложений требуется, чтобы ваш планшетный ПК был доступен для поиска через Bluetooth на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
-    <string name="bluetooth_ask_discovery" product="default" msgid="5510358858113713272">"Одному из приложений требуется, чтобы ваш телефон был доступен для поиска через Bluetooth на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
+    <string name="bluetooth_ask_discovery" product="tablet" msgid="786921566047356213">"Одному из приложений требуется, чтобы ваш планшетный ПК был доступен для поиска через Bluetooth на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
+    <string name="bluetooth_ask_discovery" product="default" msgid="5510358858113713272">"Одному из приложений требуется, чтобы ваш телефон был доступен для поиска через Bluetooth на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
     <string name="bluetooth_ask_lasting_discovery" product="tablet" msgid="8863617309580598607">"Одному из приложений требуется сделать ваш планшетный ПК доступным для поиска через Bluetooth на других устройствах. Позже эти настройки можно будет изменить."</string>
     <string name="bluetooth_ask_lasting_discovery" product="default" msgid="6487606808683607975">"Одному из приложений требуется сделать ваш телефон доступным для поиска через Bluetooth на других устройствах. Позже эти настройки можно будет изменить."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" product="tablet" msgid="3346529092809011149">"Одному из приложений требуется включить Bluetooth и сделать ваш планшетный ПК доступным для поиска на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" product="default" msgid="4724094889807196118">"Одному из приложений требуется включить Bluetooth и сделать ваш телефон доступным для поиска на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" product="tablet" msgid="3346529092809011149">"Одному из приложений требуется включить Bluetooth и сделать ваш планшетный ПК доступным для поиска на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" product="default" msgid="4724094889807196118">"Одному из приложений требуется включить Bluetooth и сделать ваш телефон доступным для поиска на других устройствах в течение <xliff:g id="TIMEOUT">%1$d</xliff:g> сек."</string>
     <string name="bluetooth_ask_enablement_and_lasting_discovery" product="tablet" msgid="989613204829097159">"Одному из приложений требуется включить Bluetooth и сделать ваш планшетный ПК доступным для поиска на других устройствах. Позже эти настройки можно будет изменить."</string>
     <string name="bluetooth_ask_enablement_and_lasting_discovery" product="default" msgid="6671615712909139801">"Одному из приложений требуется включить Bluetooth и сделать ваш телефон доступным для поиска на других устройствах. Позже эти настройки можно будет изменить."</string>
     <string name="bluetooth_turning_on" msgid="4850574877288036646">"Включение Bluetooth..."</string>
@@ -226,7 +228,7 @@
     <string name="radio_info_toggle_dns_check_label" msgid="8292252930563286858">"Выбор проверки DNS"</string>
     <string name="oem_radio_info_label" msgid="6163141792477958941">"Информация/настройки OEM"</string>
     <string name="band_mode_title" msgid="954174198903776205">"Настроить частоту GSM/UMTS"</string>
-    <string name="band_mode_loading" msgid="548764766363847336">"Загрузка списка частот\u2026"</string>
+    <string name="band_mode_loading" msgid="548764766363847336">"Загрузка списка частот..."</string>
     <string name="band_mode_set" msgid="5730560180249458484">"Настроить"</string>
     <string name="band_mode_failed" msgid="1495968863884716379">"Сбой"</string>
     <string name="band_mode_succeeded" msgid="2701016190055887575">"Успешно"</string>
@@ -243,8 +245,8 @@
     <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"Накопитель извлечен при исп.!"</string>
     <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"SD-карта была извлечена во время использования!"</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Использовано байтов:"</string>
-    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Сканирование USB-накопителя\u2026"</string>
-    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Поиск мультимедиа на SD-карте\u2026"</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Сканирование USB-накопителя..."</string>
+    <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Поиск мультимедиа на SD-карте..."</string>
     <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3624143937437417788">"Только для чтения."</string>
     <string name="sdcard_settings_read_only_status" product="default" msgid="4518291824764698112">"Только для чтения."</string>
     <string name="skip_label" msgid="47510779345218297">"Далее"</string>
@@ -263,8 +265,8 @@
     <string name="settings_label" msgid="1626402585530130914">"Настройки"</string>
     <string name="settings_label_launcher" msgid="8344735489639482340">"Настройки"</string>
     <string name="settings_shortcut" msgid="3936651951364030415">"Ярлык настроек"</string>
-    <string name="airplane_mode" msgid="8837269988154128601">"Режим полёта"</string>
-    <string name="radio_controls_title" msgid="6889937359495515769">"Ещё\u2026"</string>
+    <string name="airplane_mode" msgid="8837269988154128601">"Режим полета"</string>
+    <string name="radio_controls_title" msgid="6889937359495515769">"Ещё..."</string>
     <string name="wireless_networks_settings_title" msgid="3643009077742794212">"Беспроводные сети"</string>
     <string name="radio_controls_summary" msgid="1838624369870907268">"Wi-Fi, Bluetooth, режим полета, мобильные сети и VPN"</string>
     <string name="roaming" msgid="3596055926335478572">"Интернет-роуминг"</string>
@@ -452,7 +454,7 @@
     <string name="bluetooth_connecting_error_message" msgid="229861986106185022">"Не удалось подключиться к <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_preference_scan_title" msgid="2277464653118896016">"Поиск устройств"</string>
     <string name="bluetooth_search_for_devices" msgid="5957007154213560390">"Поиск устройств"</string>
-    <string name="bluetooth_searching_for_devices" msgid="9203739709307871727">"Поиск\u2026"</string>
+    <string name="bluetooth_searching_for_devices" msgid="9203739709307871727">"Поиск..."</string>
     <string name="bluetooth_preference_device_settings" msgid="907776049862799122">"Настройки устройства"</string>
     <string name="bluetooth_preference_paired_devices" msgid="1970524193086791964">"Подключенные устройства"</string>
     <string name="bluetooth_preference_found_devices" msgid="1647983835063249680">"Список"</string>
@@ -461,11 +463,11 @@
     <string name="bluetooth_device_context_pair_connect" msgid="7611522504813927727">"Выполнить сопряжение и подключить"</string>
     <string name="bluetooth_device_context_unpair" msgid="662992425948536144">"Отменить сопряжение"</string>
     <string name="bluetooth_device_context_disconnect_unpair" msgid="7644014238070043798">"Отключить и отменить сопряжение"</string>
-    <string name="bluetooth_device_context_connect_advanced" msgid="2643129703569788771">"Параметры\u2026"</string>
+    <string name="bluetooth_device_context_connect_advanced" msgid="2643129703569788771">"Параметры..."</string>
     <string name="bluetooth_menu_advanced" msgid="8572178316357220524">"Расширенные"</string>
     <string name="bluetooth_advanced_titlebar" msgid="2142159726881547669">"Расш. настройки Bluetooth"</string>
     <string name="bluetooth_empty_list_bluetooth_off" msgid="4793562956642282639">"Чтобы обнаружить устройства, включите Bluetooth."</string>
-    <string name="bluetooth_connect_specific_profiles_title" msgid="6952214406025825164">"Подключить к\u2026"</string>
+    <string name="bluetooth_connect_specific_profiles_title" msgid="6952214406025825164">"Подключить к..."</string>
     <string name="bluetooth_profile_a2dp" msgid="2031475486179830674">"Профиль A2DP"</string>
     <string name="bluetooth_profile_headset" msgid="8658779596261212609">"Профиль HSP/HFP"</string>
     <string name="bluetooth_profile_opp" msgid="9168139293654233697">"Профиль OPP"</string>
@@ -512,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Подключение…"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Подключен"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Доступен"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"Используется"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Настройки экрана"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Отключиться?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Произойдет разъединение с устройством&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -539,11 +542,11 @@
     <string name="wifi_settings_category" msgid="8719175790520448014">"Настройки Wi-Fi"</string>
     <string name="wifi_settings_title" msgid="3103415012485692233">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="668767638556052820">"Настройка и управление точками доступа беспроводной сети"</string>
-    <string name="wifi_setup_wizard_title" msgid="70277346338812325">"Wi-Fi"</string>
+    <string name="wifi_setup_wizard_title" msgid="8242230950011819054">"Выбор сети Wi-Fi"</string>
     <string name="wifi_starting" msgid="6732377932749942954">"Включение Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="8952524572499500804">"Отключение Wi-Fi…"</string>
     <string name="wifi_error" msgid="3207971103917128179">"Ошибка"</string>
-    <string name="wifi_in_airplane_mode" msgid="8652520421778203796">"Режим полёта"</string>
+    <string name="wifi_in_airplane_mode" msgid="8652520421778203796">"Режим полета"</string>
     <string name="wifi_fail_to_scan" msgid="1265540342578081461">"Не удалось начать поиск сетей."</string>
     <string name="wifi_notify_open_networks" msgid="3755768188029653293">"Уведомления о сетях"</string>
     <string name="wifi_notify_open_networks_summary" msgid="3038290727701553612">"Сообщать при обнаружении открытой сети"</string>
@@ -686,6 +689,7 @@
     <string name="ring_volume_title" msgid="7938706566797464165">"Громкость звонка"</string>
     <string name="vibrate_in_silent_title" msgid="3897968069156767036">"Виброзвонок без звука"</string>
     <string name="notification_sound_title" msgid="5137483249425507572">"Звук уведомлений по умолчанию"</string>
+    <string name="notification_pulse_title" msgid="1247988024534030629">"Индикатор событий"</string>
     <string name="incoming_call_volume_title" msgid="8073714801365904099">"Мелодия"</string>
     <string name="notification_volume_title" msgid="2012640760341080408">"Уведомление"</string>
     <string name="checkbox_notification_same_as_incoming_call" msgid="1073644356290338921">"Использовать этот уровень громкости также для уведомлений"</string>
@@ -821,7 +825,7 @@
     <string name="memory_available" msgid="5052397223077021181">"Доступно"</string>
     <string name="memory_available_read_only" msgid="6497534390167920206">"Доступно (только для чтения)"</string>
     <string name="memory_size" msgid="6629067715017232195">"Всего места"</string>
-    <string name="memory_calculating_size" msgid="2188358544203768588">"Идёт подсчет\u2026"</string>
+    <string name="memory_calculating_size" msgid="2188358544203768588">"Идет подсчет..."</string>
     <string name="memory_apps_usage" msgid="2348501997988663688">"Данные приложений и файлы мультимедиа"</string>
     <string name="memory_media_usage" msgid="3738830697707880405">"Мультимедиа"</string>
     <string name="memory_downloads_usage" msgid="3755173051677533027">"Загрузки"</string>
@@ -1102,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Показать процессы в кэше"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"Сбросить настройки"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"Сбросить настройки?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Будут сброшены следующие настройки:\n\n"<li>"список отключенных приложений;"</li>\n<li>"уведомления для отключенных приложений;"</li>\n<li>"список приложений по умолчанию;"</li>\n<li>"ограничения на передачу данных в фоновом режиме;"</li>\n<li>"ограничения на разрешения."</li>\n\n"Данные приложений удалены не будут."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Будут сброшены следующие настройки:\n\n "<li>"список отключенных приложений;"</li>\n" "<li>"уведомления для отключенных приложений;"</li>\n" "<li>"список приложений по умолчанию;"</li>\n" "<li>"ограничения на передачу данных в фоновом режиме."</li>\n\n" Данные приложений удалены не будут."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"Да"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Управление местом"</string>
     <string name="filter" msgid="2018011724373033887">"Фильтр"</string>
@@ -1119,7 +1123,7 @@
     <string name="internal_storage" msgid="1584700623164275282">"Внутр. память"</string>
     <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"USB-память"</string>
     <string name="sd_card_storage" product="default" msgid="7623513618171928235">"SD-карта"</string>
-    <string name="recompute_size" msgid="7722567982831691718">"Повторное вычисление размера\u2026"</string>
+    <string name="recompute_size" msgid="7722567982831691718">"Повторное вычисление размера..."</string>
     <string name="clear_data_dlg_title" msgid="5605258400134511197">"Удалить данные приложения?"</string>
     <string name="clear_data_dlg_text" msgid="8847257251846779938">"Все данные этого приложения будут удалены без возможности восстановления, включая все файлы, базы данных, настройки, аккаунты и т. д."</string>
     <string name="dlg_ok" msgid="2402639055725653590">"ОК"</string>
@@ -1133,15 +1137,15 @@
     <string name="clear_failed_dlg_text" msgid="1092177570631523106">"Не удалось удалить данные."</string>
     <string name="security_settings_desc" product="tablet" msgid="1292421279262430109">"У этого приложения есть доступ к следующей информации на устройстве:"</string>
     <string name="security_settings_desc" product="default" msgid="61749028818785244">"У этого приложения есть доступ к следующей информации на устройстве:"</string>
-    <string name="security_settings_desc_multi" product="tablet" msgid="7300932212437084403">"Этому приложению доступны указанные ниже данные на вашем планшетном ПК. Чтобы повысить производительность и уменьшить объём используемой памяти, приложению <xliff:g id="BASE_APP_NAME">%1$s</xliff:g> предоставлены некоторые из этих разрешений, так как оно выполняется в рамках того же процесса, что и <xliff:g id="ADDITIONAL_APPS_LIST">%2$s</xliff:g>:"</string>
-    <string name="security_settings_desc_multi" product="default" msgid="6610268420793984752">"Этому приложению доступны указанные ниже данные на вашем телефоне. Чтобы повысить производительность и уменьшить объём используемой памяти, приложению <xliff:g id="BASE_APP_NAME">%1$s</xliff:g> предоставлены некоторые из этих разрешений, так как оно выполняется в рамках того же процесса, что и <xliff:g id="ADDITIONAL_APPS_LIST">%2$s</xliff:g>:"</string>
+    <string name="security_settings_desc_multi" product="tablet" msgid="7300932212437084403">"Этому приложению доступны указанные ниже данные на вашем планшетном ПК. Чтобы повысить производительность и уменьшить объем используемой памяти, приложению <xliff:g id="BASE_APP_NAME">%1$s</xliff:g> предоставлены некоторые из этих разрешений, так как оно выполняется в рамках того же процесса, что и <xliff:g id="ADDITIONAL_APPS_LIST">%2$s</xliff:g>:"</string>
+    <string name="security_settings_desc_multi" product="default" msgid="6610268420793984752">"Этому приложению доступны указанные ниже данные на вашем телефоне. Чтобы повысить производительность и уменьшить объем используемой памяти, приложению <xliff:g id="BASE_APP_NAME">%1$s</xliff:g> предоставлены некоторые из этих разрешений, так как оно выполняется в рамках того же процесса, что и <xliff:g id="ADDITIONAL_APPS_LIST">%2$s</xliff:g>:"</string>
     <string name="join_two_items" msgid="1336880355987539064">"<xliff:g id="FIRST_ITEM">%1$s</xliff:g> и <xliff:g id="SECOND_ITEM">%2$s</xliff:g>"</string>
     <string name="join_many_items_last" msgid="5925635036718502724">"<xliff:g id="ALL_BUT_LAST_ITEM">%1$s</xliff:g> и <xliff:g id="LAST_ITEM_0">%2$s</xliff:g>"</string>
     <string name="join_many_items_first" msgid="4333907712038448660">"<xliff:g id="FIRST_ITEM">%1$s</xliff:g>, <xliff:g id="ALL_BUT_FIRST_AND_LAST_ITEM">%2$s</xliff:g>"</string>
     <string name="join_many_items_middle" msgid="7556692394478220814">"<xliff:g id="ADDED_ITEM">%1$s</xliff:g>, <xliff:g id="REST_OF_ITEMS">%2$s</xliff:g>"</string>
     <string name="security_settings_billing_desc" msgid="8061019011821282358">"Это приложение может списывать деньги с вашего счета:"</string>
     <string name="security_settings_premium_sms_desc" msgid="8734171334263713717">"Отправить SMS?"</string>
-    <string name="computing_size" msgid="1599186977475211186">"Вычисление\u2026"</string>
+    <string name="computing_size" msgid="1599186977475211186">"Вычисление..."</string>
     <string name="invalid_size_value" msgid="7563537715280712285">"Не удалось определить размер пакета."</string>
     <string name="empty_list_msg" msgid="5993162337235907160">"Нет приложений сторонних разработчиков."</string>
     <string name="version_text" msgid="9189073826278676425">"Версия <xliff:g id="VERSION_NUM">%1$s</xliff:g>"</string>
@@ -1150,7 +1154,7 @@
     <string name="move_app_to_internal" product="default" msgid="3895430471913858185">"Перенести на телефон"</string>
     <string name="move_app_to_sdcard" product="nosdcard" msgid="4350451696315265420">"Перенести на USB"</string>
     <string name="move_app_to_sdcard" product="default" msgid="1143379049903056407">"Переместить на SD-карту"</string>
-    <string name="moving" msgid="6431016143218876491">"Перенос\u2026"</string>
+    <string name="moving" msgid="6431016143218876491">"Перенос..."</string>
     <string name="insufficient_storage" msgid="481763122991093080">"Недостаточно места."</string>
     <string name="does_not_exist" msgid="3476487214886606748">"Приложение не установлено."</string>
     <string name="app_forward_locked" msgid="6331564656683790866">"Приложение защищено от копирования."</string>
@@ -1172,7 +1176,7 @@
     <string name="app_ops_running" msgid="7706949900637284122">"Выполняется"</string>
     <string name="app_ops_never_used" msgid="9114608022906887802">"(не использовалось)"</string>
     <string name="storageuse_settings_title" msgid="5657014373502630403">"Использование памяти"</string>
-    <string name="storageuse_settings_summary" msgid="3748286507165697834">"Объём памяти, занимаемый приложениями"</string>
+    <string name="storageuse_settings_summary" msgid="3748286507165697834">"Объем памяти, занимаемый приложениями"</string>
     <string name="runningservices_settings_title" msgid="8097287939865165213">"Работающие приложения"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"Просмотр и управление работающими приложениями"</string>
     <string name="service_restarting" msgid="2242747937372354306">"Перезапуск"</string>
@@ -1198,7 +1202,7 @@
     <string name="runningservicedetails_processes_title" msgid="928115582044655268">"Процессы"</string>
     <string name="service_stop" msgid="6369807553277527248">"Остановить"</string>
     <string name="service_manage" msgid="1876642087421959194">"Настройки"</string>
-    <string name="service_stop_description" msgid="9146619928198961643">"Эта служба была запущена соответствующим приложением, в котором может произойти сбой, если ее остановить."</string>
+    <string name="service_stop_description" msgid="9146619928198961643">"Эта служба была запущена соответствующим приложением, в котором может произойти сбой, если ее оставновить."</string>
     <string name="heavy_weight_stop_description" msgid="2979218727598321095">"Если закрыть это приложение, можно потерять несохраненные данные."</string>
     <string name="background_process_stop_description" msgid="5034773197139654588">"Это старый процесс приложения, который по-прежнему запущен на случай, если он снова понадобится. Обычно останавливать его не требуется."</string>
     <string name="service_manage_description" msgid="7050092269951613102">"<xliff:g id="CLIENT_NAME">%1$s</xliff:g>: в настоящий момент используется. Нажмите \"Настройки\" для управления."</string>
@@ -1237,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Для смены нажмите CTRL + Пробел"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"По умолчанию"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Раскладка клавиатуры"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Словарь пользователя"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Пользовательский словарь"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Пользовательские словари"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Пользовательский словарь"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Добавить"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Добавление в словарь"</string>
@@ -1299,7 +1301,12 @@
     <string name="bugreport_in_power" msgid="4548816486587403971">"Отчеты об ошибках"</string>
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Показывать в меню опцию отправки отчета об ошибке"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Не выключать экран"</string>
-    <string name="keep_screen_on_summary" msgid="2173114350754293009">"Во время зарядки экран будет всегда включён"</string>
+    <string name="keep_screen_on_summary" msgid="2173114350754293009">"Во время зарядки экран будет всегда включен"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Включить журнал трансляции операций HCI Bluetooth"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"Сохранять все пакеты HCI Bluetooth в файле"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Выберите среду"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Среда выполнения"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"Перезагрузить устройство, чтобы сменить среду выполнения с <xliff:g id="OLD">%1$s</xliff:g> на <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Фиктивные местоположения"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Разрешить использование фиктивных местоположений"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Разрешить отладку USB?"</string>
@@ -1317,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Запрашивать разрешение для считывания данных с SD-карты"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Защитить SD-карту?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Если SD-карта защищена, приложения должны запрашивать разрешение для считывания данных с нее.\n\nНекоторые приложения могут не работать. В этом случае дождитесь, пока они не обновятся."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Локальный терминальный доступ"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Разрешить терминальный доступ к локальной оболочке"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Выбор гаджета"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Выберите виджет"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Создать виджет и разрешить доступ?"</string>
@@ -1330,7 +1339,7 @@
     <string name="testing_usage_stats" msgid="7823048598893937339">"Статистика использования"</string>
     <string name="display_order_text" msgid="8592776965827565271">"Упорядочить по:"</string>
     <string name="app_name_label" msgid="5440362857006046193">"Приложение"</string>
-    <string name="launch_count_label" msgid="4019444833263957024">"Подсчёт"</string>
+    <string name="launch_count_label" msgid="4019444833263957024">"Подсчет"</string>
     <string name="usage_time_label" msgid="295954901452833058">"Время использования"</string>
     <string name="accessibility_settings" msgid="3975902491934816215">"Спец. возможности"</string>
     <string name="accessibility_settings_title" msgid="2130492524656204459">"Настройки специальных возможностей"</string>
@@ -1363,10 +1372,20 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"Бесплатное приложение TalkBack дает голосовое описание элементов интерфейса для пользователей с нарушением зрения. Установить его из Android Маркета?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Нет описания"</string>
     <string name="settings_button" msgid="3006713718908152930">"Настройки"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Печать"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Настройки печати"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Сервисы"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Включить <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"Сервису \"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g>\" могут быть переданы документы, содержащие конфиденциальные данные."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Сервисов нет"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Настройки"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Добавить принтеры"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"ВКЛ"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"ВЫКЛ"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Батарея"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"На что расходуется заряд батареи"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Расход батареи неизвестен."</string>
-    <string name="power_usage_level_and_status" msgid="7449847570973811784">"<xliff:g id="LEVEL">%1$s</xliff:g> – <xliff:g id="STATUS">%2$s</xliff:g>"</string>
+    <string name="power_usage_level_and_status" msgid="7449847570973811784">"<xliff:g id="LEVEL">%1$s</xliff:g> – <xliff:g id="STATUS">%2$s</xliff:g>"</string>
     <string name="battery_since_unplugged" msgid="338073389740738437">"Расход заряда батареи с момента отключения от сети питания"</string>
     <string name="battery_since_reset" msgid="7464546661121187045">"Расход заряда батареи с момента перезагрузки"</string>
     <string name="battery_stats_on_battery" msgid="4970762168505236033">"<xliff:g id="TIME">%1$s</xliff:g> от батареи"</string>
@@ -1402,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Модуль Wi-Fi включен"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Планшетный ПК"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Телефон"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Отправлено"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Получено"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Данные отправлены"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Данные получены"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Данные отправлены по сети Wi‑Fi"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Данные получены по сети Wi‑Fi"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Аудио"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Видео"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Время работы"</string>
@@ -1436,7 +1457,7 @@
     <string name="menu_stats_total" msgid="8973377864854807854">"Всего"</string>
     <string name="menu_stats_refresh" msgid="1676215433344981075">"Обновить"</string>
     <string name="process_kernel_label" msgid="3916858646836739323">"ОС Android"</string>
-    <string name="process_mediaserver_label" msgid="6500382062945689285">"Медиасервер"</string>
+    <string name="process_mediaserver_label" msgid="6500382062945689285">"Сервер медиа"</string>
     <string name="voice_input_output_settings" msgid="1336135218350444783">"Голосовой ввод и вывод"</string>
     <string name="voice_input_output_settings_title" msgid="2442850635048676991">"Настройки голосового ввода и вывода"</string>
     <string name="voice_search_settings_title" msgid="2775469246913196536">"Голосовой поиск"</string>
@@ -1457,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Тон"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Влияет на высоту синтезированной речи"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Язык"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Язык не выбран"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Выбор языка для чтения текста"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Прослушать пример"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Воспроизвести краткую демонстрацию синтезированной речи"</string>
@@ -1580,13 +1602,13 @@
     <string name="wifi_setup_forget" msgid="2562847595567347526">"Удалить"</string>
     <string name="wifi_setup_save" msgid="3659235094218508211">"Сохранить"</string>
     <string name="wifi_setup_cancel" msgid="3185216020264410239">"Отмена"</string>
-    <string name="wifi_setup_status_scanning" msgid="5317003416385428036">"Поиск доступных сетей\u2026"</string>
+    <string name="wifi_setup_status_scanning" msgid="5317003416385428036">"Поиск доступных сетей..."</string>
     <string name="wifi_setup_status_select_network" msgid="7519563569903137003">"Чтобы подключиться, нажмите на сеть"</string>
     <string name="wifi_setup_status_existing_network" msgid="6394925174802598186">"Подключиться к существующей сети"</string>
     <string name="wifi_setup_status_unsecured_network" msgid="8143046977328718252">"Подключение к незащищенной сети"</string>
     <string name="wifi_setup_status_edit_network" msgid="4765340816724760717">"Укажите конфигурацию сети"</string>
     <string name="wifi_setup_status_new_network" msgid="7468952850452301083">"Подключиться к новой сети"</string>
-    <string name="wifi_setup_status_connecting" msgid="4971421484401530740">"Подключение\u2026"</string>
+    <string name="wifi_setup_status_connecting" msgid="4971421484401530740">"Подключение..."</string>
     <string name="wifi_setup_status_proceed_to_next" msgid="6708250000342940031">"Далее"</string>
     <string name="wifi_setup_status_eap_not_supported" msgid="5335338851032315905">"EAP не поддерживается."</string>
     <string name="wifi_setup_eap_not_supported" msgid="1955087534276570962">"Во время установки нельзя настроить подключение к сети Wi-Fi с защитой EAP. Вы можете сделать это позже в меню \"Настройки &gt; Беспроводные сети\"."</string>
@@ -1598,7 +1620,7 @@
     <string name="sync_failed" msgid="1696499856374109647">"Ошибка синхронизации"</string>
     <string name="sync_active" msgid="8476943765960863040">"Синхронизация активна"</string>
     <string name="account_sync_settings_title" msgid="5131314922423053588">"Синхронизация"</string>
-    <string name="sync_is_failing" msgid="1591561768344128377">"Проблемы с синхронизацией. Скоро всё заработает."</string>
+    <string name="sync_is_failing" msgid="1591561768344128377">"Проблемы с синхронизацией. Скоро все заработает."</string>
     <string name="add_account_label" msgid="7811707265834013767">"Добавить аккаунт"</string>
     <string name="background_data" msgid="5779592891375473817">"Фоновый режим"</string>
     <string name="background_data_summary" msgid="8328521479872763452">"Синхронизация, отправка и получение данных доступны всегда"</string>
@@ -1614,7 +1636,7 @@
     <string name="settings_backup_summary" msgid="7916877705938054035">"Резервная копия настроек."</string>
     <string name="sync_menu_sync_now" msgid="6154608350395805683">"Синхронизировать"</string>
     <string name="sync_menu_sync_cancel" msgid="8292379009626966949">"Отменить синхронизацию"</string>
-    <string name="sync_one_time_sync" msgid="6766593624598183090">"Нажмите для синхронизации <xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="6766593624598183090">"Нажмите, чтобы начать синхронизацию <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_gmail" msgid="714886122098006477">"Gmail"</string>
     <string name="sync_calendar" msgid="9056527206714733735">"Календарь"</string>
@@ -1661,7 +1683,7 @@
     <string name="debug_drawing_category" msgid="6755716469267367852">"Рисование"</string>
     <string name="debug_hw_drawing_category" msgid="6220174216912308658">"Аппаратное ускорение визуализации"</string>
     <string name="debug_monitoring_category" msgid="7640508148375798343">"Мониторинг"</string>
-    <string name="strict_mode" msgid="1938795874357830695">"Строгий режим"</string>
+    <string name="strict_mode" msgid="1938795874357830695">"Включен строгий режим"</string>
     <string name="strict_mode_summary" msgid="142834318897332338">"Подсвечивать экран во время длительных операций"</string>
     <string name="pointer_location" msgid="6084434787496938001">"Отображать касания"</string>
     <string name="pointer_location_summary" msgid="840819275172753713">"Визуализировать на экране нажатия и жесты"</string>
@@ -1673,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"Подсвечивать области экрана при отрисовке с GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Показ. аппаратные обновл."</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"Выделять аппаратные уровни зеленым при обновлении"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Показывать наложения"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Порядок: синий, зеленый, светло-красный, красный"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"Отладка наложения"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Откл. аппарат. наложения"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Всегда использовать GPU при компоновке экрана"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Вкл. трассировку OpenGL"</string>
@@ -1697,7 +1718,7 @@
     <string name="immediately_destroy_activities_summary" msgid="3592221124808773368">"Удалять сводку действий после их завершения"</string>
     <string name="app_process_limit_title" msgid="4280600650253107163">"Лимит фоновых процессов"</string>
     <string name="show_all_anrs" msgid="28462979638729082">"Все ANR"</string>
-    <string name="show_all_anrs_summary" msgid="641908614413544127">"Уведомлять о неотвечающих фоновых приложениях"</string>
+    <string name="show_all_anrs_summary" msgid="641908614413544127">"Уведомлять о том, что приложение не отвечает"</string>
     <string name="experimental_webview" msgid="4492200819033780927">"Использовать WebView"</string>
     <string name="experimental_webview_summary" msgid="3431620080869482446">"Приложения будут использовать бета-версию WebView"</string>
     <string name="data_usage_summary_title" msgid="3804110657238092929">"Передача данных"</string>
@@ -1756,8 +1777,8 @@
     <string name="data_usage_restrict_background_multiuser" product="default" msgid="2642864376010074543">"Если ограничить передачу данных в фоновом режиме, некоторые приложения и службы не будут работать без подключения к сети Wi-Fi.\n\nНастройки будут изменены для всех пользователей устройства."</string>
     <string name="data_usage_sweep_warning" msgid="6387081852568846982"><font size="12">"Предупреждение"</font>\n<font size="21">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font></string>
     <string name="data_usage_sweep_limit" msgid="860566507375933039"><font size="12">"Лимит"</font>\n<font size="21">"<xliff:g id="NUMBER">^1</xliff:g>"</font>" "<font size="9">"<xliff:g id="UNIT">^2</xliff:g>"</font></string>
-    <string name="data_usage_uninstalled_apps" msgid="614263770923231598">"Удалённые приложения"</string>
-    <string name="data_usage_uninstalled_apps_users" msgid="7986294489899813194">"Удалённые приложения и пользователи"</string>
+    <string name="data_usage_uninstalled_apps" msgid="614263770923231598">"Удаленные приложения"</string>
+    <string name="data_usage_uninstalled_apps_users" msgid="7986294489899813194">"Удаленные приложения и пользователи"</string>
     <string name="data_usage_received_sent" msgid="5039699009276621757">"Получено: <xliff:g id="RECEIVED">%1$s</xliff:g>; отправлено: <xliff:g id="SENT">%2$s</xliff:g>"</string>
     <string name="data_usage_total_during_range" msgid="4091294280619255237">"<xliff:g id="RANGE">%2$s</xliff:g>: ≈<xliff:g id="TOTAL">%1$s</xliff:g>"</string>
     <string name="data_usage_total_during_range_mobile" product="tablet" msgid="5961720793603268572">"<xliff:g id="RANGE">%2$s</xliff:g>: <xliff:g id="TOTAL">%1$s</xliff:g> (трафик, определенный устройством). Данные оператора могут отличаться."</string>
@@ -1874,12 +1895,15 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Настройки будут изменены для всех пользователей устройства."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Измените язык"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Измените размер шрифта"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Ограничения"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Отменить ограничения"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Изменить PIN-код"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Включить уведомления"</string>
     <string name="help_label" msgid="1107174367904110532">"Справка"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Аккаунт для контента"</string>
     <string name="user_picture_title" msgid="7297782792000291692">"Документ с фото"</string>
-    <string name="cell_broadcast_settings" msgid="8415582011920085222">"Сообщения сети"</string>
-    <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Выберите типы экстренных оповещений на экране."</string>
+    <string name="cell_broadcast_settings" msgid="8415582011920085222">"Оповещение населения"</string>
+    <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Укажите, какие оповещения вы хотите получать"</string>
     <string name="user_restrictions_title" msgid="7745810037152772035">"Ограничения для приложения и контента"</string>
     <string name="user_rename" msgid="8523499513614655279">"ПЕРЕИМЕНОВАТЬ"</string>
     <string name="app_restrictions_custom_label" msgid="6160672982086584261">"Настроить ограничения"</string>

@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"Kumokonekta"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"Nakakonekta"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"Available"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"Ginagamit"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"Mga setting ng display"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"Magdiskonekta?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"Tatapusin nito ang iyong koneksyon sa:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"Ipakita na-cache proseso"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"I-reset kagustuhan sa app"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"I-reset ang gusto sa app?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"Ire-reset nito ang lahat ng kagustuhan para sa:\n\n "<li>"Naka-disable na apps"</li>\n" "<li>"Mga naka-disable na notification ng app"</li>\n" "<li>"Mga default na application para sa mga pagkilos"</li>\n" "<li>"Mga paghihigpit sa data sa background para sa apps"</li>\n" "<li>"Anumang mga paghihigpit sa pahintulot"</li>\n\n" Hindi ka mawawalan ng anumang data ng app."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"Ire-reset nito ang lahat ng kagustuhan para sa:\n\n "<li>"Hindi pinapaganang apps"</li>\n" "<li>"Mga notification ng hindi pinapaganang app"</li>\n" "<li>"Mga default na application para sa mga pagkilos"</li>\n" "<li>"Paghihigpit sa data sa background para sa apps"</li>\n\n" Hindi ka mawawalan ng anumang data ng app."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"I-reset ang apps"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"Pamahalaan ang espasyo"</string>
     <string name="filter" msgid="2018011724373033887">"I-filter"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"Para palit, pindot Control-Spacebar"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"Default"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"Mga layout ng keyboard"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"Diksyunaryo ng user"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"Personal na diksyunaryo"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"Personal na mga diksyunaryo"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"Personal na diksyunaryo"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"Magdagdag"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"Idagdag sa diksyunaryo"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"Isama ang pagpipilian sa menu ng power para sa pagkuha ng ulat sa bug"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"Manatiling gumagana"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"Hindi kailanman hihinto ang screen kapag kinakargahan"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"I-enable ang Bluetooth HCI snoop log"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"I-capture ang lahat ng bluetooth HCI packet sa isang file"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"Piliin ang runtime"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"Piliin ang runtime"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"I-reboot upang baguhin ang runtime mula sa <xliff:g id="OLD">%1$s</xliff:g> patungo sa <xliff:g id="NEW">%2$s</xliff:g>?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"Payagan ang mga kunwaring lokasyon"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"Payagan ang mga kunwaring lokasyon"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"Payagan ang pag-debug ng USB?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"Dapat na humiling ng pahintulot ang apps na basahin ang SD card"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"Protektahan ang SD card?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"Kapag pinoprotektahan ang SD card, dapat na humiling ng pahintulot ang apps na magbasa ng data mula sa panlabas na storage.\n\nMaaaring hindi gumana ang ilang apps hanggang sa ma-update ng mga developer ng mga ito."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"Lokal na terminal"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"Paganahin ang terminal app na nag-aalok ng lokal na shell access"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"Pumili ng gadget"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"Pumili ng widget"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"Likhain ang widget at payagan ang access?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"Nagbibigay ang TalkBack ng pasalitang feedback upang matulungan ang mga user na bulag at may mahinang paningin. Nais mo ba itong i-install nang libre mula sa Android Market?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"Walang ibinigay na paglalarawan."</string>
     <string name="settings_button" msgid="3006713718908152930">"Mga Setting"</string>
+    <string name="print_settings" msgid="4742428530112487843">"Pag-print"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"Mga setting ng pag-print"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"Mga Serbisyo"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"Gumamit ng <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"Makakatanggap ang <xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> ng mga dokumentong pini-print mo. Maaaring maglaman ang mga naturang dokumento ng sensitibong data."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"Walang mga naka-install na serbisyo"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"Mga Setting"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"Magdagdag ng mga printer"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"Naka-on"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"Naka-off"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"Baterya"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"Ano ang gumagamit ng baterya"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"Di avail data ng gmit baterya."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Tumatakbo ang Wi-Fi"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"Tablet"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"Telepono"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"Ipinadala ang data"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"Natanggap na data"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"Naipadala ang data sa mobile"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"Natanggap ang data sa mobile"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Naipadala ang data ng Wi‑Fi"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Natanggap ang data ng Wi‑Fi"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"Audio"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"Video"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"Naka-on ang oras"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Pitch"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"Naaapektuhan ang tono ng tekstong sinasabi"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"Wika"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"Walang napiling wika"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"Itinatakda ang boses na partikular sa wika para sa sinasambit na teksto"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"Makinig sa isang halimbawa"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"Mag-play ng maikling pagpapakita ng speech synthesis"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"I-flash ang view sa windows kapag ginuhit sa GPU"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"Pakita upd hardware layer"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"I-flash berde hardware layer pag nag-update ito"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"Ipakita overdraw ng GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"Maganda-di maganda: asul, berde, light red, pula"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"I-debug ang GPU overdraw"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"Wag paganahin HW overlay"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"Laging gamitin ang GPU para sa screen compositing"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"Paganahin trace ng OpenGL"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"Nakakaapekto ang setting na ito sa lahat ng user sa teleponong ito."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"Baguhin ang wika"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"Baguhin ang laki ng font"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"Mga Paghihigpit"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"Alisin ang paghihigpit"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"Palitan ang PIN"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"Ipakita notification"</string>
     <string name="help_label" msgid="1107174367904110532">"Tulong"</string>
     <string name="user_account_title" msgid="1127193807312271167">"Account para sa nilalaman"</string>

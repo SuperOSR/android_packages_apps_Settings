@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"در حال اتصال"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"متصل"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"در دسترس"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"درحال استفاده"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"تنظیمات نمایش"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"اتصال قطع شود؟"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"این کار اتصال شما را با این دستگاه قطع می‌کند:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"فرآیندهای ذخیره شده در حافظهٔ پنهان"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"بازنشانی تنظیمات برگزیده برنامه"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"تنظیمات برگزیده برنامه بازنشانی شوند؟"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"با این کار تمام تنظیمات برگزیده برای این موارد بازنشانی می‌شود:\n\n "<li>"برنامه‌های غیرفعال شده"</li>\n" "<li>"اعلان‌های برنامه غیرفعال شده"</li>\n" "<li>"برنامه‌های پیش‌فرض برای عملکردها"</li>\n" "<li>"محدودیت‌های داده پس‌زمینه برای برنامه‌ها"</li>\n" "<li>"هرگونه محدودیت‌های مجوز"</li>\n\n" هیچ داده برنامه‌ای را از دست نخواهید داد."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"این کار همه تنظیمات برگزیده این موارد را بازنشانی می‌کند:\n\n "<li>"برنامه‌های غیرفعال شده"</li>\n" "<li>"اعلان‌های برنامه غیرفعال شده"</li>\n" "<li>"برنامه‌های پیش‌فرض برای عملیات"</li>\n" "<li>"محدودیت‌های داده پس‌زمینه برای برنامه‌ها"</li>\n\n" داده برنامه را از دست نمی‌دهید."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"بازنشانی برنامه‌ها"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"مدیریت فضا"</string>
     <string name="filter" msgid="2018011724373033887">"فیلتر"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"برای تغییر، Control-کلید فاصله را فشار هید"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"پیش‌فرض"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"طرح‌بندی‌های صفحه‌کلید"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"فرهنگ لغت کاربر"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"فرهنگ لغت شخصی"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"فرهنگ‌های لغت شخصی"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"فرهنگ لغت شخصی"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"افزودن"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"افزودن به فرهنگ لغت"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"گزینه‌ای در منوی نیرو برای گرفتن گزارش اشکال اضافه شود"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"بیدار ماندن"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"صفحه هرگز در حین شارژ شدن به حالت خواب نمی‌رود"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"فعال کردن گزارش تجسس Bluetooth HCI"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"ذخیره تمامی بسته‌های HCI بلوتوث در یک فایل"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"انتخاب زمان اجرا"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"انتخاب زمان اجرا"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"برای تغییر زمان اجرا از <xliff:g id="OLD">%1$s</xliff:g> به <xliff:g id="NEW">%2$s</xliff:g> دوباره راه‌اندازی شود؟"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"مکان‌های کاذب مجاز هستند"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"مکان‌های کاذب مجاز هستند"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"رفع عیب USB انجام شود؟"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"برنامه باید برای خواندن کارت SD اجازه بگیرد"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"کارت SD حفاظت شود؟"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"وقتی کارت SD محافظت شده است٬ برنامه‌ها باید اجازه بگیرند تا داده‌های حافظه خارجی را بخوانند.\n\nبرخی از برنامه‌ها ممکن است تا توسط برنامه‌نویسان خود به‌روزرسانی نشوند کار نکنند."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"ترمینال محلی"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"فعال کردن ترمینال برنامه‌ کاربردی که دسترسی به برنامه محلی را پیشنهاد می‌کند"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"انتخاب اسبابک"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"انتخاب ابزارک"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"آیا مایل به ایجاد ابزارک و دادن اجازهٔ دسترسی هستید؟"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"Talkback یک بازخورد شفاهی برای کمک به کاربران نابینا و کم‌بینا ارائه می‌دهد. آیا می‌خواهید آن را به صورت رایگان از Android Market نصب کنید؟"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"توضیحی ارائه نشده است."</string>
     <string name="settings_button" msgid="3006713718908152930">"تنظیمات"</string>
+    <string name="print_settings" msgid="4742428530112487843">"چاپ کردن"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"تنظیمات چاپ"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"خدمات"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"از <xliff:g id="SERVICE">%1$s</xliff:g> استفاده شود؟"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> می‌تواند اسنادی را که چاپ می‌کنید دریافت کند. این اسناد ممکن است حاوی اطلاعات مهمی باشند."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"سرویسی نصب نشده است"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"تنظیمات"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"افزودن چاپگرها"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"روشن"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"خاموش"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"باتری"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"چه چیزی باتری را مصرف کرده است"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"اطلاعات مصرف باتری موجود نیست."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi در حال اجرا"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"رایانهٔ لوحی"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"تلفن"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"داده ارسال شده"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"داده دریافت شده"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"داده‌های ارسالی تلفن همراه"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"داده‌های دریافتی تلفن همراه"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"‫داده‌های ارسالی Wi-Fi"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"‫داده‌های دریافتی Wi-Fi"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"صوتی"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"ویدئو"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"زمان روشن"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"زیر و بمی صدا"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"بر صدای متن گفته شده تأثیر می‌گذارد"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"زبان"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"زبان انتخاب نشده است"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"صدای خاص یک زبان را برای متن گفتاری تنظیم می‌کند"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"به نمونه‌ای گوش کنید"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"نمایش کوتاهی از صدای ترکیبی پخش شود"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"هنگام طراحی با GPU٬ نماها در داخل پنجره‌ها فلش شوند"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"نمایش به‌روزرسانی‌های لایه‌های سخت‌افزار"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"وقتی لایه‌های سخت‌افزاری به‌روزرسانی‌ می‌شوند، به رنگ سبز درآیند"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"نمایش بازنویسی GPU"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"از بهترین تا بدترین: آبی، سبز، قرمز روشن، قرمز"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"اشکال‌زدایی بازنویسی GPU"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"غیر فعال کردن پوشش HW"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"همیشه از GPU در ترکیب صفحه استفاده شود"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"فعال کردن ردیابی‌های OpenGL"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"این تنظیم روی همه کاربران موجود در این تلفن تأثیر می‌گذارد."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"تغییر زبان"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"تغییر اندازه قلم"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"محدودیت‌ها"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"حذف محدودیت‌ها"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"تغییر پین"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"نمایش اعلان‌ها"</string>
     <string name="help_label" msgid="1107174367904110532">"راهنما"</string>
     <string name="user_account_title" msgid="1127193807312271167">"حساب برای محتوا"</string>

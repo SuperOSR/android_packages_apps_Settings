@@ -514,6 +514,7 @@
     <string name="wifi_display_status_connecting" msgid="5688608834000748607">"कनेक्ट कर रहा है"</string>
     <string name="wifi_display_status_connected" msgid="8364125226376985558">"कनेक्ट किया गया"</string>
     <string name="wifi_display_status_available" msgid="1924167525172207067">"उपलब्ध"</string>
+    <string name="wifi_display_status_in_use" msgid="8556830875615434792">"उपयोग में"</string>
     <string name="wifi_display_details" msgid="7791118209992162698">"प्रदर्शन सेटिंग"</string>
     <string name="wifi_display_disconnect_title" msgid="1543715924639003599">"डिस्‍कनेक्‍ट करें?"</string>
     <string name="wifi_display_disconnect_text" msgid="4824860802264489088">"इससे &lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt; के साथ आपका कनेक्शन समाप्त हो जाएगा"</string>
@@ -1105,7 +1106,7 @@
     <string name="show_background_processes" msgid="2009840211972293429">"कैश की गई प्रक्रियाएं दिखाएं"</string>
     <string name="reset_app_preferences" msgid="1321050641018356925">"एप्लि. प्राथमिकताएं रीसेट करें"</string>
     <string name="reset_app_preferences_title" msgid="6093179367325336662">"एप्लि. प्राथमिकताएं रीसेट करें?"</string>
-    <string name="reset_app_preferences_desc" msgid="4822447731869201512">"इससे निम्न की सभी प्राथमिकताएं रीसेट हो जाएंगी:\n\n "<li>"अक्षम एप्लिकेशन"</li>\n" "<li>"अक्षम एप्लिकेशन सूचनाएं"</li>\n" "<li>"कार्यवाहियों के लिए डिफ़ॉल्ट एप्लिकेशन"</li>\n" "<li>"एप्लिकेशन के लिए पृष्ठभूमि डेटा प्रतिबंध"</li>\n" "<li>"अनुमति के कोई भी प्रतिबंध"</li>\n\n" आपका सभी एप्लिकेशन डेटा बना रहेगा."</string>
+    <string name="reset_app_preferences_desc" msgid="1118129530999596317">"इससे इनके लिए सभी प्राथमिकताएं रीसेट हो जाएंगी:\n\n "<li>"अक्षम एप्लिकेशन"</li>\n" "<li>"अक्षम एप्लिकेशन सूचनाएं"</li>\n" "<li>"क्रियाओं के लिए डिफ़ॉल्ट एप्लिकेशन"</li>\n" "<li>"एप्लिकेशन के लिए पृष्ठभूमि डेटा प्रतिबंध"</li>\n\n" आपका एप्लिकेशन डेटा नहीं खोएगा."</string>
     <string name="reset_app_preferences_button" msgid="2559089511841281242">"एप्लिकेशन रीसेट करें"</string>
     <string name="manage_space_text" msgid="8852711522447794676">"स्‍थान प्रबंधित करें"</string>
     <string name="filter" msgid="2018011724373033887">"फ़िल्टर"</string>
@@ -1240,9 +1241,7 @@
     <string name="keyboard_layout_dialog_switch_hint" msgid="3889961090676293795">"स्‍विच करने हेतु, Control-Spacebar दबाएं"</string>
     <string name="keyboard_layout_default_label" msgid="2952672513543482165">"डिफ़ॉल्ट"</string>
     <string name="keyboard_layout_picker_title" msgid="556081931972771610">"कीबोर्ड लेआउट"</string>
-    <string name="user_dict_settings_titlebar" msgid="765659257455000490">"उपयोगकर्ता शब्‍दकोश"</string>
-    <string name="user_dict_single_settings_title" msgid="524997218433540614">"व्यक्तिगत डिक्शनरी"</string>
-    <string name="user_dict_multiple_settings_title" msgid="3735224433307996276">"व्यक्तिगत डिक्शनरी"</string>
+    <string name="user_dict_settings_title" msgid="3427169369758733521">"व्यक्तिगत शब्दकोष"</string>
     <string name="user_dict_settings_summary" msgid="7965571192902870454"></string>
     <string name="user_dict_settings_add_menu_title" msgid="4056762757149923551">"जोड़ें"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4702613990174126482">"शब्‍दकोश में जोड़ें"</string>
@@ -1303,6 +1302,11 @@
     <string name="bugreport_in_power_summary" msgid="5764234382355067053">"बग रिपोर्ट लेने के लिए पावर मेनू में विकल्‍प शामिल करें"</string>
     <string name="keep_screen_on" msgid="1146389631208760344">"सचेत रहें"</string>
     <string name="keep_screen_on_summary" msgid="2173114350754293009">"चार्ज होने के दौरान स्‍क्रीन कभी निष्‍क्रिय नहीं होगी"</string>
+    <string name="bt_hci_snoop_log" msgid="3340699311158865670">"Bluetooth HCI स्‍नूप लॉग सक्षम करें"</string>
+    <string name="bt_hci_snoop_log_summary" msgid="730247028210113851">"फ़ाइल के सभी Bluetooth HCI पैकेट कैप्‍चर करें"</string>
+    <string name="select_runtime_title" msgid="649783802363155346">"रनटाइम चुनें"</string>
+    <string name="select_runtime_dialog_title" msgid="5314872813037493958">"रनटाइम चुनें"</string>
+    <string name="select_runtime_warning_message" msgid="1937574953265648165">"रनटाइम को <xliff:g id="OLD">%1$s</xliff:g> से <xliff:g id="NEW">%2$s</xliff:g> में बदलने के लिए रीबूट करें?"</string>
     <string name="allow_mock_location" msgid="2787962564578664888">"कृत्रिम स्‍थानों को अनुमति दें"</string>
     <string name="allow_mock_location_summary" msgid="317615105156345626">"कृत्रिम स्‍थानों को अनुमति दें"</string>
     <string name="adb_warning_title" msgid="6234463310896563253">"USB डीबग करने की अनुमति दें?"</string>
@@ -1320,6 +1324,8 @@
     <string name="enforce_read_external_summary" product="default" msgid="2750027486786530064">"SD कार्ड पढ़ने के लिए एप्‍लिकेशन को अनुमति का अनुरोध करना होगा"</string>
     <string name="enforce_read_external_confirm_title" product="default" msgid="273220585729800783">"SD कार्ड सुरक्षित करें?"</string>
     <string name="enforce_read_external_confirm_message" product="default" msgid="3858482712337574407">"SD कार्ड के सुरक्षित होने पर, एप्‍लिकेशन को बाहरी संग्रहण से डेटा पढ़ने की अनुमति का अनुरोध करना होगा.\n\nहो सकता है कुछ एप्‍लिकेशन उनके डेवलपर द्वारा अपडेट नहीं किए जाने तक कार्य न करें."</string>
+    <string name="enable_terminal_title" msgid="95572094356054120">"स्थानीय टर्मिनल"</string>
+    <string name="enable_terminal_summary" msgid="67667852659359206">"स्थानीय शेल एक्सेस ऑफ़र करने वाला टर्मिनल एप्लिकेशन सक्षम करें"</string>
     <string name="gadget_picker_title" msgid="98374951396755811">"गैजेट चुनें"</string>
     <string name="widget_picker_title" msgid="9130684134213467557">"विजेट चुनें"</string>
     <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="2538303018392590627">"विजेट बनाएं और पहुंच की अनुमति दें?"</string>
@@ -1366,6 +1372,16 @@
     <string name="accessibility_service_no_apps_message" msgid="7751662416377046539">"TalkBack नेत्रहीन और कम-दृष्टि वाले उपयोगकर्ताओं के लिए बोलकर फ़ीडबैक प्रदान करता है. क्‍या आप इसे Android Market से निशुल्‍क इंस्‍टॉल करना चाहते हैं?"</string>
     <string name="accessibility_service_default_description" msgid="1072730037861494125">"कोई विवरण नहीं दिया गया."</string>
     <string name="settings_button" msgid="3006713718908152930">"सेटिंग"</string>
+    <string name="print_settings" msgid="4742428530112487843">"प्रिंटिंग"</string>
+    <string name="print_settings_title" msgid="4911263339115736689">"प्रिंटिंग सेटिंग"</string>
+    <string name="print_services_title" msgid="1088097751249445946">"सेवाएं"</string>
+    <string name="print_service_security_warning_title" msgid="2338435517408144841">"<xliff:g id="SERVICE">%1$s</xliff:g> का उपयोग करें?"</string>
+    <string name="print_service_security_warning_summary" msgid="919299459931111450">"<xliff:g id="PRINT_SERVICE_NAME">%1$s</xliff:g> आपके द्वारा प्रिंट किए जाने वाले दस्तावेज़ों को प्राप्त कर सकती है. ऐसे दस्तावेज़ों में संवेदनशील डेटा हो सकता है."</string>
+    <string name="print_no_services_installed" msgid="8443039625463872294">"कोई सेवा इंस्‍टॉल नहीं है"</string>
+    <string name="print_menu_item_settings" msgid="6591330373682227082">"सेटिंग"</string>
+    <string name="print_menu_item_add_printers" msgid="2890738028215834012">"प्रिंटर जोड़ें"</string>
+    <string name="print_feature_state_on" msgid="8098901852502441048">"चालू"</string>
+    <string name="print_feature_state_off" msgid="7294876968403966040">"बंद"</string>
     <string name="power_usage_summary_title" msgid="7190304207330319919">"बैटरी"</string>
     <string name="power_usage_summary" msgid="7237084831082848168">"बैटरी का उपयोग कौन कर रहा है"</string>
     <string name="power_usage_not_available" msgid="3214000535532434353">"बैटरी उपयोग डेटा उपलब्ध नहीं है."</string>
@@ -1405,8 +1421,10 @@
     <string name="usage_type_wifi_running" msgid="3134357198266380400">"Wi-Fi चल रहा है"</string>
     <string name="usage_type_phone" product="tablet" msgid="262638572890253393">"टेबलेट"</string>
     <string name="usage_type_phone" product="default" msgid="9108247984998041853">"फ़ोन"</string>
-    <string name="usage_type_data_send" msgid="2857401966985425427">"डेटा भेजा गया"</string>
-    <string name="usage_type_data_recv" msgid="7251090882025234185">"डेटा प्राप्त"</string>
+    <string name="usage_type_data_send" msgid="3875198715268918671">"मोबाइल डेटा भेजा गया"</string>
+    <string name="usage_type_data_recv" msgid="6694951443404021754">"मोबाइल डेटा प्राप्त हुआ"</string>
+    <string name="usage_type_data_wifi_send" msgid="7178327382353096029">"Wi‑Fi डेटा भेजा गया"</string>
+    <string name="usage_type_data_wifi_recv" msgid="7822328607564241372">"Wi‑Fi डेटा प्राप्त हुआ"</string>
     <string name="usage_type_audio" msgid="6957269406840886290">"ऑडियो"</string>
     <string name="usage_type_video" msgid="4295357792078579944">"वीडियो"</string>
     <string name="usage_type_on_time" msgid="3351200096173733159">"चालू करने का समय"</string>
@@ -1460,6 +1478,7 @@
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"पिच"</string>
     <string name="tts_default_pitch_summary" msgid="1328298665182885277">"बोले गए पाठ के लहजे को प्रभावित करता है"</string>
     <string name="tts_default_lang_title" msgid="8018087612299820556">"भाषा"</string>
+    <string name="tts_lang_not_selected" msgid="7395787019276734765">"भाषा नहीं चुनी गई है"</string>
     <string name="tts_default_lang_summary" msgid="5219362163902707785">"बोले गए पाठ के लिए भाषा-विशिष्ट ध्‍वनि सेट करता है"</string>
     <string name="tts_play_example_title" msgid="7094780383253097230">"एक उदाहरण सुनें"</string>
     <string name="tts_play_example_summary" msgid="8029071615047894486">"वाक् संश्लेषण का एक संक्षिप्त प्रदर्शन चलाएं"</string>
@@ -1676,8 +1695,7 @@
     <string name="show_hw_screen_updates_summary" msgid="1115593565980196197">"GPU के साथ आरेखित करने पर विंडो में दृश्‍यों को फ़्लैश करें"</string>
     <string name="show_hw_layers_updates" msgid="5645728765605699821">"हार्डवेयर लेयर अप. दिखाएं"</string>
     <string name="show_hw_layers_updates_summary" msgid="5296917233236661465">"हार्डवेयर लेयर अपडेट होने पर हरे फ़्लैश होते हैं"</string>
-    <string name="show_hw_overdraw" msgid="1136884304711318251">"GPU ओवरड्रॉ दिखाएं"</string>
-    <string name="show_hw_overdraw_summary" msgid="4295714000923082647">"सबसे अच्छे से सबसे खराब: नीला, हरा, हल्का लाल, लाल"</string>
+    <string name="debug_hw_overdraw" msgid="2968692419951565417">"GPU ओवरड्रॉ डीबग करें"</string>
     <string name="disable_overlays" msgid="2074488440505934665">"HW ओवरले अक्षम करें"</string>
     <string name="disable_overlays_summary" msgid="3578941133710758592">"स्‍क्रीन संयोजन के लिए हमेशा GPU का उपयोग करें"</string>
     <string name="enable_opengl_traces_title" msgid="6790444011053219871">"OpenGL चिह्न सक्षम करें"</string>
@@ -1875,6 +1893,9 @@
     <string name="global_change_warning" product="default" msgid="2461264421590324675">"यह सेटिंग इस फ़ोन के सभी उपयोगकर्ताओं को प्रभावित करती है."</string>
     <string name="global_locale_change_title" msgid="5956281361384221451">"भाषा बदलें"</string>
     <string name="global_font_change_title" msgid="1887126466191012035">"फ़ॉन्ट आकार बदलें"</string>
+    <string name="restriction_settings_title" msgid="4233515503765879736">"प्रतिबंध"</string>
+    <string name="restriction_menu_reset" msgid="2067644523489568173">"प्रतिबंधों को निकालें"</string>
+    <string name="restriction_menu_change_pin" msgid="740081584044302775">"पिन बदलें"</string>
     <string name="app_notifications_switch_label" msgid="9124072219553687583">"सूचना दिखाएं"</string>
     <string name="help_label" msgid="1107174367904110532">"सहायता"</string>
     <string name="user_account_title" msgid="1127193807312271167">"सामग्री के लिए खाता"</string>
