@@ -46,13 +46,11 @@
                 android:key="toggle_power_button_ends_call_preference"
                 android:title="@string/accessibility_power_button_ends_call_prerefence_title"
                 android:persistent="false"/>
-				
-				<!--
+
         <CheckBoxPreference
                 android:key="toggle_lock_screen_rotation_preference"
                 android:title="@string/accelerometer_title"
                 android:persistent="false"/>
-        -->        
 
         <CheckBoxPreference
                 android:key="toggle_speak_password_preference"
@@ -73,16 +71,6 @@
                 android:entries="@array/long_press_timeout_selector_titles"
                 android:entryValues="@array/long_press_timeout_selector_values"
                 android:persistent="false"/>
-		
-		<CheckBoxPreference
-                android:key="boot_fast_enable"
-                android:title="@string/boot_fast_mode"
-                android:persistent="false"/>
-				
-		<CheckBoxPreference
-				android:key="cpu_fast_mode"
-				android:title="@string/cpu_fast_mode"
-				android:persistent="false"/>
 
     </PreferenceCategory>
 

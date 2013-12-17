@@ -95,12 +95,6 @@
             <intent android:action="android.settings.SHOW_REGULATORY_INFO" />
         </PreferenceScreen>
 
-        <!-- CPU type -->
-        <Preference android:key="cpu_type"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/cpu_type"
-                android:summary="@string/device_info_default"/>
-                
         <!-- Device hardware model -->
         <Preference android:key="device_model" 
                 style="?android:preferenceInformationStyle"
@@ -117,12 +111,6 @@
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/fcc_equipment_id"
-                android:summary="@string/device_info_default"/>
-        
-        <!-- Device software version -->
-        <Preference android:key="software_version"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/software_version"
                 android:summary="@string/device_info_default"/>
 
         <!-- Device Baseband version -->

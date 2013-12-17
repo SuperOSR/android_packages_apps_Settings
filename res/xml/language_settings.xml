@@ -81,9 +81,9 @@
         <PreferenceScreen android:key="recognizer_settings"
                 android:title="@string/recognizer_settings_title" />
 
-        <!--<PreferenceScreen android:key="tts_settings"
+        <PreferenceScreen android:key="tts_settings"
                 android:fragment="com.android.settings.tts.TextToSpeechSettings"
-                android:title="@string/tts_settings_title" />-->
+                android:title="@string/tts_settings_title" />
     </PreferenceCategory>
 
     <PreferenceCategory android:key="pointer_settings_category"

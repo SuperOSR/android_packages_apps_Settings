@@ -326,7 +326,6 @@ public class Settings extends PreferenceActivity
         ManageApplications.class.getName(),
         ProcessStatsUi.class.getName(),
         NotificationStation.class.getName(),
-        AppOpsSummary.class.getName(),
         LocationSettings.class.getName(),
         SecuritySettings.class.getName(),
         PrivacySettings.class.getName(),
@@ -506,7 +505,6 @@ public class Settings extends PreferenceActivity
         // uiOptions for fragments also defined as activities in manifest.
         if (WifiSettings.class.getName().equals(fragmentName) ||
                 WifiP2pSettings.class.getName().equals(fragmentName) ||
-                WifiDisplaySettings.class.getName().equals(fragmentName) ||
                 BluetoothSettings.class.getName().equals(fragmentName) ||
                 DreamSettings.class.getName().equals(fragmentName) ||
                 LocationSettings.class.getName().equals(fragmentName) ||
@@ -532,12 +530,9 @@ public class Settings extends PreferenceActivity
     }
 
     private void updateHeaderList(List<Header> target) {
-        final boolean showDev = true;
-        /*
-        mDevelopmentPreferences.getBoolean(
+        final boolean showDev = mDevelopmentPreferences.getBoolean(
                 DevelopmentSettings.PREF_SHOW,
                 android.os.Build.TYPE.equals("eng"));
-        */
         int i = 0;
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
@@ -1070,7 +1065,6 @@ public class Settings extends PreferenceActivity
     public static class WirelessSettingsActivity extends Settings { /* empty */ }
     public static class TetherSettingsActivity extends Settings { /* empty */ }
     public static class VpnSettingsActivity extends Settings { /* empty */ }
-    public static class EthernetSettingsActivity extends Settings { /* empty */ }
     public static class DateTimeSettingsActivity extends Settings { /* empty */ }
     public static class StorageSettingsActivity extends Settings { /* empty */ }
     public static class WifiSettingsActivity extends Settings { /* empty */ }
@@ -1086,7 +1080,15 @@ public class Settings extends PreferenceActivity
     public static class DeviceInfoSettingsActivity extends Settings { /* empty */ }
     public static class ApplicationSettingsActivity extends Settings { /* empty */ }
     public static class ManageApplicationsActivity extends Settings { /* empty */ }
-    public static class AppOpsSummaryActivity extends Settings { /* empty */ }
+    public static class AppOpsSummaryActivity extends Settings {
+        @Override
+        public boolean isValidFragment(String className) {
+            if (AppOpsSummary.class.getName().equals(className)) {
+                return true;
+            }
+            return super.isValidFragment(className);
+        }
+    }
     public static class StorageUseActivity extends Settings { /* empty */ }
     public static class DevelopmentSettingsActivity extends Settings { /* empty */ }
     public static class AccessibilitySettingsActivity extends Settings { /* empty */ }

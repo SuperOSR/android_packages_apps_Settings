@@ -60,13 +60,9 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
-    private static final String KEY_SOFTWARE_VERSION = "software_version";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
-    private static final String KEY_CPU_TYPE = "cpu_type";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
-    private static final String PROPERTY_CPUTYPE = "ro.sys.cputype";
-    private static final String PROPETY_BASEBAND = "ro.sw.embeded.telephony";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -90,17 +86,11 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
         setStringSummary(KEY_FIRMWARE_VERSION, Build.VERSION.RELEASE);
         findPreference(KEY_FIRMWARE_VERSION).setEnabled(true);
-	    setStringSummary(KEY_SOFTWARE_VERSION,Build.FIRMWARE);
-	 
         setValueSummary(KEY_BASEBAND_VERSION, "gsm.version.baseband");
-        if(!SystemProperties.getBoolean(PROPETY_BASEBAND,false)){
-	    	removePreference(KEY_BASEBAND_VERSION);
-	    }
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL + getMsvSuffix());
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
-        setStringSummary(KEY_CPU_TYPE,SystemProperties.get(PROPERTY_CPUTYPE,"UNKNOWN"));
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
 
@@ -147,7 +137,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
 
         // These are contained by the root preference screen
         parentPreference = getPreferenceScreen();
-        if (false) {//(UserHandle.myUserId() == UserHandle.USER_OWNER) {
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
             Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
                     KEY_SYSTEM_UPDATE_SETTINGS,
                     Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);

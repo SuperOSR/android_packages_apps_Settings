@@ -190,22 +190,22 @@ public class DreamSettings extends SettingsPreferenceFragment {
 
     private Dialog createWhenToDreamDialog() {
         final CharSequence[] items = {
-                //mContext.getString(R.string.screensaver_settings_summary_dock),
+                mContext.getString(R.string.screensaver_settings_summary_dock),
                 mContext.getString(R.string.screensaver_settings_summary_sleep),
-                //mContext.getString(R.string.screensaver_settings_summary_either_short)
+                mContext.getString(R.string.screensaver_settings_summary_either_short)
         };
 
-        int initialSelection = 0/*mBackend.isActivatedOnDock() && mBackend.isActivatedOnSleep() ? 2
+        int initialSelection = mBackend.isActivatedOnDock() && mBackend.isActivatedOnSleep() ? 2
                 : mBackend.isActivatedOnDock() ? 0
                 : mBackend.isActivatedOnSleep() ? 1
-                : -1*/;
+                : -1;
 
         return new AlertDialog.Builder(mContext)
                 .setTitle(R.string.screensaver_settings_when_to_dream)
                 .setSingleChoiceItems(items, initialSelection, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        mBackend.setActivatedOnDock(item == 0 || item == 2 || item == 1);
-                        mBackend.setActivatedOnSleep(item == 1 || item == 2 || item == 0);
+                        mBackend.setActivatedOnDock(item == 0 || item == 2);
+                        mBackend.setActivatedOnSleep(item == 1 || item == 2);
                     }
                 })
                 .create();
