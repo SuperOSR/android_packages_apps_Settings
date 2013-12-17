@@ -436,6 +436,9 @@
     <!-- HTTP proxy settings. Warning message about limited application support [CHAR LIMIT=100]-->
     <string name="proxy_warning_limited_support">The HTTP proxy is used by the browser but may not be used by the other apps.</string>
 
+    <!-- HTTP proxy settings. Title for Proxy-Auto Config URL.  [CHAR LIMIT=NONE]-->
+    <string name="proxy_url">"PAC URL: "</string>
+
     <!-- Radio Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radio_info_signal_location_label">Location:</string>
     <!-- Radio Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
@@ -1223,36 +1226,21 @@
     <string name="bluetooth_dock_settings_remember">Remember settings</string>
 
     <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
-    <string name="wifi_display_settings_title">Wireless display</string>
-    <!-- Wifi Display settings. Text displayed when Wifi display is off and device list is empty [CHAR LIMIT=80]-->
-    <string name="wifi_display_settings_empty_list_wifi_display_off">To see devices, turn wireless display on.</string>
-    <!-- Wifi Display settings. Text displayed when Wifi Display is off and device list is empty [CHAR LIMIT=80]-->
-    <string name="wifi_display_settings_empty_list_wifi_display_disabled">Wireless display is disabled because Wi\u2011Fi is off.</string>
-    <!-- Wifi Display settings. The title of the action button that initiates a search for nearby devices [CHAR LIMIT=20] -->
-    <string name="wifi_display_search_for_devices">Search for displays</string>
-    <!-- Wifi Display settings. The title of the action button while a search for nearby devices is in progress [CHAR LIMIT=20] -->
-    <string name="wifi_display_searching_for_devices">Searching\u2026</string>
+    <string name="wifi_display_settings_title">Cast screen</string>
+    <!-- Wifi Display settings. The title of a menu item to enable wireless display [CHAR LIMIT=40] -->
+    <string name="wifi_display_enable_menu_item">Enable wireless display</string>
     <!-- Wifi Display settings. Text that appears when scanning for devices is finished and no nearby device was found [CHAR LIMIT=40]-->
-    <string name="wifi_display_no_devices_found">No nearby wireless displays were found.</string>
-    <!-- Wifi Display settings. The sub heading for devices which have already been paired with this device. [CHAR LIMIT=40] -->
-    <string name="wifi_display_paired_devices">Paired displays</string>
-    <!-- Wifi Display settings. The sub heading for available devices during and after scanning. [CHAR LIMIT=40] -->
-    <string name="wifi_display_available_devices">Available devices</string>
+    <string name="wifi_display_no_devices_found">No nearby devices were found.</string>
     <!-- Wifi Display settings. The status summary for connecting devices. [CHAR LIMIT=40] -->
     <string name="wifi_display_status_connecting">Connecting</string>
     <!-- Wifi Display settings. The status summary for connected devices. [CHAR LIMIT=40] -->
     <string name="wifi_display_status_connected">Connected</string>
-    <!-- Wifi Display settings. The status summary for available devices. [CHAR LIMIT=40] -->
-    <string name="wifi_display_status_available">Available</string>
     <!-- Wifi Display settings. The status summary for devices that's already in use. [CHAR LIMIT=40] -->
     <string name="wifi_display_status_in_use">In use</string>
+    <!-- Wifi Display settings. The status summary for devices that's not available. [CHAR LIMIT=40] -->
+    <string name="wifi_display_status_not_available">Unavailable</string>
     <!-- Wifi Display settings. Image description for device details button. This opens the screen to rename, unpair, etc. a single device. -->
     <string name="wifi_display_details">Display settings</string>
-
-    <!-- Wifi Display settings. Disconnect dialog.  The title of the dialog. [CHAR LIMIT=40] -->
-    <string name="wifi_display_disconnect_title">Disconnect?</string>
-    <!-- Wifi Display settings. Disconnect dialog.  Message for disconnecting from the display. [CHAR LIMIT=NONE] -->
-    <string name="wifi_display_disconnect_text">This will end your connection with:&lt;br>&lt;b><xliff:g id="device_name">%1$s</xliff:g>&lt;/b></string>
 
     <!-- Wifi Display settings. Options dialog.  The title of the dialog. [CHAR LIMIT=40] -->
     <string name="wifi_display_options_title">Wireless display options</string>
@@ -1262,13 +1250,6 @@
     <string name="wifi_display_options_done">Done</string>
     <!-- Wifi Display settings. Options dialog.  The name label used when prompting the user to rename the display. [CHAR LIMIT=20] -->
     <string name="wifi_display_options_name">Name</string>
-
-    <!-- Wifi Display settings. Summary shown in Display settings. Text used for 'On' state. [CHAR LIMIT=40] -->
-    <string name="wifi_display_summary_on">On</string>
-    <!-- Wifi Display settings. Summary shown in Display settings. Text used for 'Off' state. [CHAR LIMIT=40] -->
-    <string name="wifi_display_summary_off">Off</string>
-    <!-- Wifi Display settings. Summary shown in Display settings. Text used for 'Disabled' state. [CHAR LIMIT=40] -->
-    <string name="wifi_display_summary_disabled">Disabled</string>
 
     <!-- Wifi Display settings. The sub heading for wireless display certification options. [CHAR LIMIT=40] -->
     <string name="wifi_display_certification_heading" translatable="false">Certification</string>
@@ -1948,6 +1929,19 @@
     <!-- SIM card lock settings screen, SIM PIN dialog button labels: -->
     <string name="sim_enter_cancel">Cancel</string>
 
+    <!-- Instructions telling the user that they entered the wrong SIM PIN for the last time.
+         Displayed in a dialog box.  -->
+    <string name="wrong_pin_code_pukked">Incorrect SIM PIN code you must now contact your carrier to unlock your device.</string>
+    <!-- Instructions telling the user that they entered the wrong SIM PIN while trying
+         to unlock the keyguard.  Displayed in a dialog box.  -->
+    <plurals name="wrong_pin_code">
+        <item quantity="one">Incorrect SIM PIN code, you have <xliff:g id="number">%d</xliff:g> remaining attempt before you must contact your carrier to unlock your device.</item>
+        <item quantity="other">Incorrect SIM PIN code, you have <xliff:g id="number">%d</xliff:g> remaining attempts.</item>
+    </plurals>
+    <!-- Instructions telling the user that the operation to unlock the keyguard
+         with SIM PIN failed. Displayed in one line in a large font.  -->
+    <string name="pin_failed">SIM PIN operation failed!</string>
+
     <!-- Advanced (used for diagnostics) device info activity title -->
     <string name="device_info_settings" product="tablet">Tablet status</string>
     <!-- Advanced (used for diagnostics) device info activity title -->
@@ -1970,10 +1964,6 @@
     <string name="kernel_version">Kernel version</string>
     <!-- About phone screen,  setting option name-->
     <string name="build_number">Build number</string>
-    <!-- About phone screen,  setting option name-->
-    <string name="cpu_type">Processor</string>
-    <!-- About phone screen,  setting option name-->
-    <string name="software_version">Firmware version</string>
     <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
@@ -2430,11 +2420,11 @@
     <!-- [CHAR LIMIT=30] Location mode screen, screen title -->
     <string name="location_mode_screen_title">Location mode</string>
     <!-- [CHAR LIMIT=130] Location mode screen, description for high accuracy mode -->
-    <string name="location_mode_high_accuracy_description">Use GPS, Wi\u2011Fi and mobile networks to estimate location </string>
+    <string name="location_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, and mobile networks to determine location </string>
     <!-- [CHAR LIMIT=130] Location mode screen, description for battery saving mode -->
-    <string name="location_mode_battery_saving_description">Use Wi\u2011Fi and mobile networks to estimate location</string>
+    <string name="location_mode_battery_saving_description">Use Wi\u2011Fi and mobile networks to determine location</string>
     <!-- [CHAR LIMIT=130] Location mode screen, description for sensors only mode -->
-    <string name="location_mode_sensors_only_description">Use GPS to pinpoint your location</string>
+    <string name="location_mode_sensors_only_description">Use GPS to determine your location</string>
     <!-- [CHAR LIMIT=130] Location mode screen, temporary value to show as the status of a location
          setting injected by an external app while the app is being queried for the actual value -->
     <string name="location_loading_injected_setting">Retrieving…</string>
@@ -3069,7 +3059,7 @@
     <!-- User dictionary settings. The list item to choose to insert a word into the user dictionary for all languages -->
     <string name="user_dict_settings_all_languages">For all languages</string>
     <!-- User dictionary settings. The text to show for the option that shows the entire list of supported locales to choose one [CHAR LIMIT=30] -->
-    <string name="user_dict_settings_more_languages">More languages...</string>
+    <string name="user_dict_settings_more_languages">More languages…</string>
 
     <!-- This is for diagnostics screen. The title of a screen with various items realted to launching screens that will giev the user info. For example, it contains "Phone information" and "Battery information" -->
     <string name="testing">Testing</string>
@@ -3481,6 +3471,9 @@
 
     <!-- Template for the label of the state for a ongoing print job. [CHAR LIMIT=25] -->
     <string name="print_printing_state_title_template">Printing <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
+
+    <!-- Template for the label for a cancelling print job. [CHAR LIMIT=25] -->
+    <string name="print_cancelling_state_title_template" >Cancelling <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
 
     <!-- Template for the label of the state for a failed print job. [CHAR LIMIT=25] -->
     <string name="print_failed_state_title_template">Printer error <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
@@ -3961,11 +3954,6 @@
     <string name="backup_section_title">Backup &amp; restore</string>
     <!-- Personal data section title -->
     <string name="personal_data_section_title">Personal data</string>
-    <!-- system update  -->
-    <string name="system_update_section_title" msgid="7815209034443782061">"System upgrade"</string>
-    <string name="system_recovery_title" msgid="7815209034443782061">"Recovery Mode"</string>
-    <string name="system_recovery_summary" msgid="7815209034443782061">"Reboot into the system in Recovery Mode.Can clear the data or system upgrade"</string>
-    <string name="system_recovery_dialog_massage" msgid="7815209034443782061">"Now reboot into System Recovery Mode, you can partition to remove data or system upgrade?"</string>
     <!-- Backup data menu title -->
     <string name="backup_data_title">Back up my data</string>
     <!-- Summary text of the "back up data" setting -->
@@ -4683,7 +4671,7 @@
     <!-- Text of message to show to users whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
     <string name="ssl_ca_cert_info_message">This device is managed by:\n<xliff:g id="managing_domain">%s</xliff:g>\n\nYour administrator is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nFor more information, contact your administrator.</string>
     <!-- Text of warning to show to users that have a SSL CA Cert installed.  [CHAR LIMIT=NONE] -->
-    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network\nactivity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
+    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
     <!-- Label on button that will take the user to the Trusted Credentials settings page.  [CHAR LIMIT=NONE]-->
     <string name="ssl_ca_cert_settings_button">Check trusted credentials</string>
 
@@ -4857,6 +4845,8 @@
     <string name="help_url_security" translatable="false"></string>
     <!-- Help URL, Tap & pay [DO NOT TRANSLATE] -->
     <string name="help_url_nfc_payment" translatable="false"></string>
+    <!-- Help URL, Remote display [DO NOT TRANSLATE] -->
+    <string name="help_url_remote_display" translatable="false"></string>
 
     <!-- User account title [CHAR LIMIT=30] -->
     <string name="user_account_title">Account for content</string>
@@ -4912,51 +4902,4 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
-    
-    <!-- Ethernet Settings settings title [CHAR LIMIT=20] -->
-    <string name="eth_settings_title">Ethernet</string>
-    <string name="eth_toggle_title">Use Ethernet</string>
-    <string name="eth_settings">Ethernet Settings</string>
-    <string name="eth_devices">Ethernet Devices</string>
-    <string name="eth_conf">Ethernet Configure</string>
-    <string name="eth_ip_address">IP Address</string>
-    <string name="eth_ip_string">0.0.0.0</string>
-    <string name="eth_mac_address">MAC Address</string>
-    <string name="eth_mac_string">00:00:00:00:00:00</string>
-    <string name="eth_advanced_configure">Advanced Configure</string>
-    <string name="eth_mask_address">Mask Address</string>
-    <string name="eth_dns_address">DNS Server</string>
-    <string name="eth_gw_address">GateWay</string>
-    <string name="eth_dhcp_choice">DHCP</string>
-    <string name="eth_dev_more">None Device</string>
-    <string name="eth_dev_summaryoff">DISCONNECTED</string>
-    <string name="eth_dev_summaryon">CONNECTED -- USED DEVICE: </string>
-    <string name="eth_link_status">Link Status</string>
-    <string name="eth_link_mode">Link Mode</string>
-    <string name="eth_ip_mode">IP Mode: </string>
-    <string name="eth_dhcp_mode">DHCP</string>
-    <string name="eth_manual_mode">MANUAL</string>
-    <string name="eth_ok">Ok</string>
-    <string name="eth_cancel">Cancel</string>
-    <string name="eth_advand">Advand</string>
-    <string name="eth_message">Are you apply this device?</string>
-
-	<string name="boot_fast_mode">Quick boot mode</string>
-	<string name="cpu_fast_mode">High speed mode</string>
-
-    <string name="bright_system">smart color</string>
-    <string name="bright_system_summary">It is better for playing games and video and picture </string>
-    <string name="brightness_light">intelligent backlight</string>
-    <string name="demo_mode">Demo mode</string>
-    <string name="demo_mode_summary">Only half of the screen is an effective, easy to see the effect of it</string>
-    <string name="bright_system_on">startup Bright System</string>
-    <string name="brightness_light_on">startup brightness backlight</string>
-
-    <string name="hdmi_setting">hdmi setting</string>
-    <string name="hdmi_output_mode">hdmi output mode</string>
-    <string name="hdmi_output_mode_summary">Set the default HDMI output standard</string>
-    
-    <string name="never_sleep">Never</string>
-    <string name="hdmi_full_screen">hdmi full screen mode</string>
-    <string name="hdmi_full_screen_summary">Set true to show HDMI in full screen mode.</string>
 </resources>
